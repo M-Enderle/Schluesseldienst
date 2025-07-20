@@ -1,0 +1,442 @@
+---
+// Hero section component with modern professional design
+---
+
+<section class="hero">
+    <div class="hero-background">
+        <img src="https://via.placeholder.com/1920x800/1e3a8a/ffffff?text=Professional+Locksmith+Service" 
+             alt="Professioneller Schlüsseldienst Kaufbeuren" 
+             class="hero-bg-image"
+             loading="eager">
+        <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">
+                    <img src="https://via.placeholder.com/24x24/10b981/ffffff?text=✓" alt="Verified">
+                </span>
+                <span>Zertifizierter Fachbetrieb seit 2010</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Schlüsseldienst Kaufbeuren
+                <span class="title-highlight">24h Notdienst</span>
+            </h1>
+            
+            <h2 class="hero-subtitle">
+                Türöffnung ab 29€ Festpreis - Schnell, sicher, professionell
+            </h2>
+            
+            <p class="hero-description">
+                Ausgesperrt in Kaufbeuren? Unser erfahrenes Team ist in 10-30 Minuten vor Ort. 
+                Türöffnung, Schlosswechsel, Auto-Öffnung und Einbruchschutz - alles zu fairen Festpreisen 
+                ohne versteckte Kosten.
+            </p>
+            
+            <div class="hero-features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://via.placeholder.com/32x32/3b82f6/ffffff?text=⏱" alt="Schnell">
+                    </div>
+                    <div class="feature-content">
+                        <h3>10-30 Min vor Ort</h3>
+                        <p>Schnelle Anfahrt in ganz Kaufbeuren</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://via.placeholder.com/32x32/10b981/ffffff?text=€" alt="Preis">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Ab 29€ Festpreis</h3>
+                        <p>Transparente Preise ohne Überraschungen</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://via.placeholder.com/32x32/f59e0b/ffffff?text=24" alt="24h">
+                    </div>
+                    <div class="feature-content">
+                        <h3>24h Verfügbar</h3>
+                        <p>Auch nachts, Wochenends & Feiertags</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="https://via.placeholder.com/32x32/06b6d4/ffffff?text=⚡" alt="Kostenlos">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Keine Anfahrtskosten</h3>
+                        <p>Kostenlose Anfahrt in Kaufbeuren</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-actions">
+                <button class="cta-primary">
+                    <span class="cta-text">Jetzt anrufen: 0800-123456</span>
+                    <span class="cta-subtext">Kostenlose Beratung</span>
+                </button>
+                <button class="cta-secondary">
+                    <span>Mehr über unsere Services</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Professional+Door+Opening" 
+                         alt="Professionelle Türöffnung ohne Beschädigung" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Türöffnung ohne Schäden</h4>
+                        <p>Professionelle Werkzeuge & Techniken</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/200x200/3b82f6/ffffff?text=Security+Tools" 
+                         alt="Professionelle Schlüsseldienst Werkzeuge" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Modernste Ausrüstung</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/200x200/10b981/ffffff?text=Car+Keys" 
+                         alt="Auto-Schlüsseldienst Kaufbeuren" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Auto-Öffnung</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/200x200/06b6d4/ffffff?text=Lock+Security" 
+                         alt="Hochwertige Sicherheitsschlösser" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4>Sicherheitsschlösser</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+    
+    .hero-bg-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(30, 64, 175, 0.8) 50%, rgba(59, 130, 246, 0.7) 100%);
+        z-index: -1;
+    }
+    
+    .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--spacing-20) var(--spacing-6);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-16);
+        align-items: center;
+    }
+    
+    .hero-content {
+        color: white;
+    }
+    
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-2);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-2) var(--spacing-4);
+        border-radius: var(--radius-xl);
+        font-size: var(--font-sizes-sm);
+        font-weight: 500;
+        margin-bottom: var(--spacing-6);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .badge-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .hero-title {
+        font-size: var(--font-sizes-5xl);
+        font-weight: 800;
+        margin-bottom: var(--spacing-4);
+        line-height: 1.1;
+        color: white;
+    }
+    
+    .title-highlight {
+        display: block;
+        background: linear-gradient(135deg, var(--secondary-blue), var(--accent-blue));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: var(--font-sizes-4xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-sizes-2xl);
+        font-weight: 600;
+        margin-bottom: var(--spacing-6);
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: var(--font-sizes-lg);
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: var(--spacing-8);
+        max-width: 600px;
+    }
+    
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+        margin-bottom: var(--spacing-10);
+    }
+    
+    .feature-card {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-3);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-4);
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.15);
+    }
+    
+    .feature-icon {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: var(--radius-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .feature-content h3 {
+        font-size: var(--font-sizes-sm);
+        font-weight: 700;
+        margin-bottom: var(--spacing-1);
+        color: white;
+    }
+    
+    .feature-content p {
+        font-size: var(--font-sizes-xs);
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+    }
+    
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-4);
+        max-width: 400px;
+    }
+    
+    .cta-primary {
+        background: linear-gradient(135deg, var(--success) 0%, var(--success-light) 100%);
+        color: white;
+        padding: var(--spacing-5) var(--spacing-6);
+        border-radius: var(--radius-xl);
+        font-weight: 700;
+        box-shadow: var(--shadow-xl);
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+    
+    .cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 25px 35px -5px rgba(16, 185, 129, 0.4);
+    }
+    
+    .cta-text {
+        display: block;
+        font-size: var(--font-sizes-lg);
+        margin-bottom: var(--spacing-1);
+    }
+    
+    .cta-subtext {
+        display: block;
+        font-size: var(--font-sizes-sm);
+        opacity: 0.9;
+        font-weight: 500;
+    }
+    
+    .cta-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: var(--spacing-4) var(--spacing-6);
+        border-radius: var(--radius-xl);
+        font-weight: 600;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .cta-secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    .hero-gallery {
+        position: relative;
+    }
+    
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
+    
+    .gallery-item {
+        position: relative;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+        transition: all 0.3s ease;
+    }
+    
+    .gallery-item.large {
+        grid-column: span 2;
+        aspect-ratio: 4/3;
+    }
+    
+    .gallery-item:not(.large) {
+        aspect-ratio: 1;
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        padding: var(--spacing-6) var(--spacing-4) var(--spacing-4);
+        color: white;
+    }
+    
+    .gallery-overlay h4 {
+        font-size: var(--font-sizes-sm);
+        font-weight: 700;
+        margin-bottom: var(--spacing-1);
+        color: white;
+    }
+    
+    .gallery-overlay p {
+        font-size: var(--font-sizes-xs);
+        opacity: 0.9;
+        margin: 0;
+    }
+    
+    @media (max-width: 1024px) {
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-12);
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: var(--font-sizes-4xl);
+        }
+        
+        .title-highlight {
+            font-size: var(--font-sizes-3xl);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .hero-container {
+            padding: var(--spacing-16) var(--spacing-4);
+        }
+        
+        .hero-features {
+            grid-template-columns: 1fr;
+        }
+        
+        .hero-title {
+            font-size: var(--font-sizes-3xl);
+        }
+        
+        .title-highlight {
+            font-size: var(--font-sizes-2xl);
+        }
+        
+        .hero-subtitle {
+            font-size: var(--font-sizes-xl);
+        }
+        
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .gallery-item.large {
+            grid-column: span 1;
+        }
+    }
+</style> 

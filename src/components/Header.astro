@@ -1,0 +1,119 @@
+---
+// Header component with modern professional design
+---
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <span class="logo-text">Schlüsseldienst Kaufbeuren</span>
+        </div>
+        <div class="header-actions">
+            <div class="phone-info">
+                <span class="phone-label">24h Notdienst</span>
+                <a href="tel:+491604996655" class="phone-number">01604996655</a>
+            </div>
+            <button class="contact-btn" onclick="window.location.href='tel:+491604996655'">
+                <span>Jetzt anrufen</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+        box-shadow: var(--shadow-lg);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-4) var(--spacing-6);
+        gap: var(--spacing-8);
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-3);
+        flex-shrink: 1;
+        min-width: 0;
+        width: fit-content;
+    }
+
+    .logo-text {
+        font-size: var(--font-sizes-xl);
+        font-weight: 700;
+        color: white;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.2;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+
+    .phone-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: white;
+    }
+
+    .phone-label {
+        font-size: var(--font-sizes-xs);
+        opacity: 0.8;
+        font-weight: 500;
+    }
+
+    .phone-number {
+        font-size: var(--font-sizes-lg);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: white;
+        text-align: right;
+    }
+
+    .contact-btn {
+        background: linear-gradient(135deg, var(--success) 0%, var(--success-light) 100%);
+        color: white;
+        padding: var(--spacing-3) var(--spacing-6);
+        border-radius: var(--radius-lg);
+        font-weight: 600;
+        font-size: var(--font-sizes-sm);
+        box-shadow: var(--shadow-md);
+        transition: all 0.2s ease;
+    }
+
+    .contact-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+        background: linear-gradient(135deg, var(--success-light) 0%, var(--success) 100%);
+    }
+
+    @media (max-width: 768px) {
+        .header-container {
+            padding: var(--spacing-3) var(--spacing-4);
+        }
+
+        .contact-btn {
+            display: none;
+        }
+    }
+
+    @media (max-width: 385px) {
+        .logo-text {
+            display: none;
+        }
+    }
+</style>

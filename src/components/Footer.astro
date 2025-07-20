@@ -1,0 +1,379 @@
+---
+const currentYear = new Date().getFullYear();
+
+const serviceLinks = [
+  { name: "Türöffnung Kaufbeuren", href: "#tueroeffnung" },
+  { name: "Auto-Schlüsseldienst", href: "#auto-service" },
+  { name: "Schlosswechsel", href: "#schlosswechsel" },
+  { name: "24h Notdienst", href: "#notdienst" },
+  { name: "Einbruchschutz", href: "#einbruchschutz" },
+  { name: "Tresoröffnung", href: "#tresoroeffnung" }
+];
+
+const areaLinks = [
+  { name: "Kaufbeuren Zentrum", href: "#zentrum" },
+  { name: "Neugablonz", href: "#neugablonz" },
+  { name: "Oberbeuren", href: "#oberbeuren" },
+  { name: "Hirschzell", href: "#hirschzell" },
+  { name: "Kleinkemnat", href: "#kleinkemnat" },
+  { name: "Umgebung", href: "#umgebung" }
+];
+
+const contactInfo = {
+  phone: "0800-123456",
+  email: "info@schluesseldienst-kaufbeuren.de",
+  address: "Musterstraße 123, 87600 Kaufbeuren"
+};
+---
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section company-info">
+                <div class="company-logo">
+                    <div class="company-details">
+                        <h3>Schlüsseldienst Kaufbeuren</h3>
+                        <p class="company-tagline">Ihr zuverlässiger 24h Partner</p>
+                    </div>
+                </div>
+
+                <p class="company-description">
+                    Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren.
+                    Schnell, günstig und zuverlässig - 365 Tage im Jahr für Sie da.
+                </p>
+
+                <div class="contact-info-footer">
+                    <div class="contact-item">
+                        <div class="contact-details">
+                            <span class="contact-label">24h Notruf:</span>
+                            <strong class="contact-value">{contactInfo.phone}</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-details">
+                            <span class="contact-label">E-Mail:</span>
+                            <span class="contact-value">{contactInfo.email}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Unsere Leistungen</h4>
+                <ul class="footer-links">
+                    {serviceLinks.map((link) => (
+                        <li><a href={link.href} class="footer-link">{link.name}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Einsatzgebiete</h4>
+                <ul class="footer-links">
+                    {areaLinks.map((link) => (
+                        <li><a href={link.href} class="footer-link">{link.name}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>24h Schnellkontakt</h4>
+                <div class="emergency-contact">
+                    <button class="emergency-btn" onclick={`window.location.href='tel:${contactInfo.phone}'`}>
+                        <span class="btn-text">Jetzt anrufen</span>
+                        <span class="phone-number">{contactInfo.phone}</span>
+                        <span class="btn-subtext">Kostenlose Beratung</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <p class="copyright">
+                    &copy; {currentYear} Schlüsseldienst Kaufbeuren - Alle Rechte vorbehalten
+                </p>
+                <div class="legal-links">
+                    <a href="/impressum" class="legal-link">Impressum</a>
+                    <a href="/datenschutz" class="legal-link">Datenschutz</a>
+                    <a href="/agb" class="legal-link">AGB</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+        color: white;
+        padding: var(--spacing-16) var(--spacing-6) var(--spacing-8);
+        margin-top: var(--spacing-20);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: var(--spacing-10);
+        margin-bottom: var(--spacing-12);
+    }
+
+    .footer-section h3 {
+        color: white;
+        font-size: var(--font-sizes-xl);
+        font-weight: 700;
+        margin-bottom: var(--spacing-4);
+        position: relative;
+    }
+
+    .footer-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-blue-light), var(--secondary-blue));
+        border-radius: 2px;
+    }
+
+    .footer-section h4 {
+        color: white;
+        font-size: var(--font-sizes-lg);
+        font-weight: 600;
+        margin-bottom: var(--spacing-4);
+        position: relative;
+    }
+
+    .footer-section h4::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--success);
+        border-radius: 2px;
+    }
+
+    .company-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-3);
+        margin-bottom: var(--spacing-4);
+    }
+
+    .company-details h3 {
+        margin: 0 0 var(--spacing-1) 0;
+    }
+
+    .company-details h3::after {
+        display: none;
+    }
+
+    .company-tagline {
+        font-size: var(--font-sizes-sm);
+        opacity: 0.8;
+        margin: 0;
+        font-style: italic;
+    }
+
+    .company-description {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.6;
+        margin-bottom: var(--spacing-6);
+        font-size: var(--font-sizes-sm);
+    }
+
+    .contact-info-footer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-3);
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-3);
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-1);
+    }
+
+    .contact-label {
+        font-size: var(--font-sizes-xs);
+        opacity: 0.8;
+        font-weight: 500;
+    }
+
+    .contact-value {
+        font-size: var(--font-sizes-sm);
+        color: white;
+    }
+
+    .contact-details strong {
+        color: var(--success);
+        font-weight: 700;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+
+    .footer-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: var(--font-sizes-sm);
+        transition: all 0.2s ease;
+        padding: var(--spacing-1) 0;
+        position: relative;
+    }
+
+    .footer-link::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: var(--primary-blue-light);
+        transition: width 0.3s ease;
+    }
+
+    .footer-link:hover {
+        color: var(--primary-blue-light);
+        transform: translateX(4px);
+    }
+
+    .footer-link:hover::before {
+        width: 100%;
+    }
+
+    .emergency-contact {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-4);
+    }
+
+    .emergency-btn {
+        background: linear-gradient(135deg, var(--success) 0%, var(--success-light) 100%);
+        color: white;
+        padding: var(--spacing-4);
+        border-radius: var(--radius-xl);
+        transition: all 0.3s ease;
+        text-align: center;
+        box-shadow: var(--shadow-md);
+    }
+
+    .emergency-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .btn-text {
+        display: block;
+        font-size: var(--font-sizes-sm);
+        margin-bottom: var(--spacing-1);
+        opacity: 0.9;
+    }
+
+    .phone-number {
+        display: block;
+        font-size: var(--font-sizes-lg);
+        font-weight: 800;
+        margin-bottom: var(--spacing-1);
+    }
+
+    .btn-subtext {
+        display: block;
+        font-size: var(--font-sizes-xs);
+        opacity: 0.8;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: var(--spacing-8);
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+        align-items: center;
+    }
+
+    .footer-legal {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-3);
+    }
+
+    .copyright {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: var(--font-sizes-sm);
+    }
+
+    .legal-links {
+        display: flex;
+        gap: var(--spacing-4);
+    }
+
+    .legal-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: var(--font-sizes-xs);
+        transition: color 0.2s ease;
+    }
+
+    .legal-link:hover {
+        color: var(--primary-blue-light);
+    }
+
+    @media (max-width: 1024px) {
+        .footer-content {
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-8);
+        }
+
+        .company-info {
+            grid-column: span 2;
+        }
+
+        .footer-bottom {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+        }
+
+        .company-info {
+            grid-column: span 1;
+        }
+
+        .footer-legal {
+            text-align: center;
+        }
+
+        .legal-links {
+            justify-content: center;
+        }
+    }
+</style>

@@ -1,0 +1,386 @@
+---
+// Services section component with modern professional design
+const services = [
+    {
+        title: 'Türöffnung Kaufbeuren',
+        description: 'Professionelle Türöffnung ohne Beschädigung ab 29€ Festpreis. Schnell, sicher und zuverlässig für alle Schlosstypen.',
+        keywords: 'Türöffnung, Aufsperrdienst, Notdienst',
+        image: 'https://via.placeholder.com/300x200/1e3a8a/ffffff?text=Door+Opening+Service',
+        features: ['Ohne Beschädigung', 'Ab 29€ Festpreis', 'Alle Schlosstypen']
+    },
+    {
+        title: 'Auto-Schlüsseldienst',
+        description: 'Fahrzeug ausgesperrt? Wir öffnen Ihr Auto beschädigungsfrei - alle Marken und Modelle, moderne Fahrzeugtechnik.',
+        keywords: 'Auto öffnen, Fahrzeugöffnung, KFZ-Schlüsseldienst',
+        image: 'https://via.placeholder.com/300x200/3b82f6/ffffff?text=Car+Key+Service',
+        features: ['Alle Fahrzeugmarken', 'Moderne Technik', 'Beschädigungsfrei']
+    },
+    {
+        title: 'Schlosswechsel & Reparatur',
+        description: 'Sicherheitsschlösser, Zylinderwechsel und Schlossreparaturen von Markenherstellern. Beratung inklusive.',
+        keywords: 'Schlosswechsel, Zylindertausch, Sicherheitsschloss',
+        image: 'https://via.placeholder.com/300x200/10b981/ffffff?text=Lock+Replacement',
+        features: ['Markenhersteller', 'Sicherheitsberatung', 'Garantie inklusive']
+    },
+    {
+        title: 'Einbruchschutz',
+        description: 'Professionelle Sicherheitstechnik und Beratung für optimalen Einbruchschutz Ihres Zuhauses oder Betriebs.',
+        keywords: 'Einbruchschutz, Sicherheitstechnik, Sicherheitsberatung',
+        image: 'https://via.placeholder.com/300x200/f59e0b/ffffff?text=Security+Systems',
+        features: ['Kostenlose Beratung', 'Modernste Technik', 'Zertifiziert']
+    },
+    {
+        title: 'Tresoröffnung',
+        description: '24h Tresor-Notdienst bei vergessenen Codes oder defekten Schlössern. Diskret und professionell für alle Tresortypen.',
+        keywords: 'Tresoröffnung, Safe öffnen, Tresor-Notdienst',
+        image: 'https://via.placeholder.com/300x200/06b6d4/ffffff?text=Safe+Opening',
+        features: ['Diskret & sicher', 'Alle Tresortypen', '24h verfügbar']
+    },
+    {
+        title: 'Schlüssel nachmachen',
+        description: 'Schneller Service für alle Schlüsseltypen. Auch Sicherheitsschlüssel mit Berechtigungsnachweis vor Ort möglich.',
+        keywords: 'Schlüssel nachmachen, Schlüssel kopieren, Ersatzschlüssel',
+        image: 'https://via.placeholder.com/300x200/ef4444/ffffff?text=Key+Duplication',
+        features: ['Vor Ort Service', 'Alle Schlüsseltypen', 'Sofort verfügbar']
+    }
+];
+---
+
+<section class="services">
+    <div class="services-container">
+        <div class="section-header">
+            <div class="header-badge">
+                <span>Unsere Expertise</span>
+            </div>
+            <h2>Professionelle Schlüsseldienst-Leistungen in Kaufbeuren</h2>
+            <p class="section-description">
+                Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. 
+                Unser 24h Notfall-Schlüsseldienst ist schnell, günstig und zuverlässig in ganz Kaufbeuren unterwegs.
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            {services.map((service) => (
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src={service.image} alt={service.title} loading="lazy">
+                        <div class="service-overlay">
+                            <div class="service-keywords">
+                                {service.keywords}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-content">
+                        <h3 class="service-title">{service.title}</h3>
+                        <p class="service-description">{service.description}</p>
+                        
+                        <ul class="service-features">
+                            {service.features.map((feature) => (
+                                <li class="feature-item">
+                                    <span class="feature-icon">
+                                        <img src="https://via.placeholder.com/16x16/10b981/ffffff?text=✓" alt="Check">
+                                    </span>
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                        
+                        <div class="service-actions">
+                            <button class="service-btn primary">
+                                Jetzt beauftragen
+                            </button>
+                            <button class="service-btn secondary">
+                                Mehr Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </div>
+        
+        <div class="services-cta">
+            <div class="cta-content">
+                <h3>Notfall? Wir sind 24/7 für Sie da!</h3>
+                <p>
+                    Rufen Sie jetzt an für sofortige Hilfe und kostenlose Beratung
+                </p>
+                <div class="cta-phone">
+                    <span class="phone-number">0800-123456</span>
+                    <span class="phone-description">Kostenloser Anruf - 24h erreichbar</span>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Emergency+Service" alt="24h Notdienst" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .services {
+        padding: var(--spacing-20) var(--spacing-6);
+        background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+    }
+    
+    .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto var(--spacing-16);
+    }
+    
+    .header-badge {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, var(--primary-blue-light), var(--secondary-blue));
+        color: white;
+        padding: var(--spacing-2) var(--spacing-4);
+        border-radius: var(--radius-xl);
+        font-size: var(--font-sizes-sm);
+        font-weight: 600;
+        margin-bottom: var(--spacing-6);
+    }
+    
+    .services h2 {
+        font-size: var(--font-sizes-4xl);
+        margin-bottom: var(--spacing-6);
+        color: var(--gray-900);
+        line-height: 1.2;
+    }
+    
+    .section-description {
+        font-size: var(--font-sizes-lg);
+        color: var(--gray-600);
+        line-height: 1.6;
+        margin: 0;
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--spacing-8);
+        margin-bottom: var(--spacing-20);
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        transition: all 0.3s ease;
+        border: 1px solid var(--gray-200);
+    }
+    
+    .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--primary-blue-light);
+    }
+    
+    .service-image {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover .service-image img {
+        transform: scale(1.05);
+    }
+    
+    .service-overlay {
+        position: absolute;
+        top: var(--spacing-4);
+        right: var(--spacing-4);
+    }
+    
+    .service-keywords {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        color: var(--primary-blue);
+        padding: var(--spacing-2) var(--spacing-3);
+        border-radius: var(--radius-lg);
+        font-size: var(--font-sizes-xs);
+        font-weight: 600;
+    }
+    
+    .service-content {
+        padding: var(--spacing-6);
+    }
+    
+    .service-title {
+        font-size: var(--font-sizes-xl);
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: var(--spacing-3);
+    }
+    
+    .service-description {
+        color: var(--gray-600);
+        line-height: 1.6;
+        margin-bottom: var(--spacing-6);
+    }
+    
+    .service-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 var(--spacing-6) 0;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-2);
+        margin-bottom: var(--spacing-2);
+        font-size: var(--font-sizes-sm);
+        color: var(--gray-700);
+    }
+    
+    .feature-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--success);
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+    
+    .service-actions {
+        display: flex;
+        gap: var(--spacing-3);
+    }
+    
+    .service-btn {
+        flex: 1;
+        padding: var(--spacing-3) var(--spacing-4);
+        border-radius: var(--radius-lg);
+        font-weight: 600;
+        font-size: var(--font-sizes-sm);
+        transition: all 0.2s ease;
+        text-align: center;
+    }
+    
+    .service-btn.primary {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+        color: white;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .service-btn.primary:hover {
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .service-btn.secondary {
+        background: var(--gray-100);
+        color: var(--gray-700);
+        border: 1px solid var(--gray-300);
+    }
+    
+    .service-btn.secondary:hover {
+        background: var(--gray-200);
+        border-color: var(--gray-400);
+    }
+    
+    .services-cta {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+        border-radius: var(--radius-xl);
+        padding: var(--spacing-12);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-10);
+        align-items: center;
+        color: white;
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .cta-content h3 {
+        font-size: var(--font-sizes-3xl);
+        font-weight: 700;
+        margin-bottom: var(--spacing-4);
+        color: white;
+    }
+    
+    .cta-content p {
+        font-size: var(--font-sizes-lg);
+        margin-bottom: var(--spacing-6);
+        opacity: 0.9;
+    }
+    
+    .cta-phone {
+        text-align: center;
+        padding: var(--spacing-6);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .phone-number {
+        display: block;
+        font-size: var(--font-sizes-3xl);
+        font-weight: 800;
+        margin-bottom: var(--spacing-2);
+        color: white;
+    }
+    
+    .phone-description {
+        font-size: var(--font-sizes-sm);
+        opacity: 0.9;
+    }
+    
+    .cta-image {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .cta-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    @media (max-width: 768px) {
+        .services {
+            padding: var(--spacing-16) var(--spacing-4);
+        }
+        
+        .services h2 {
+            font-size: var(--font-sizes-3xl);
+        }
+        
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+        }
+        
+        .services-cta {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+            padding: var(--spacing-8);
+        }
+        
+        .cta-content h3 {
+            font-size: var(--font-sizes-2xl);
+        }
+        
+        .phone-number {
+            font-size: var(--font-sizes-2xl);
+        }
+    }
+</style> 

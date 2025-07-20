@@ -1,0 +1,248 @@
+---
+export interface Props {
+    title: string;
+    description?: string;
+    canonical?: string;
+}
+
+const { title, description = "Schlüsseldienst Kaufbeuren ✅ in 10-30 Minuten vor Ort ✅ Türöffnung ab 29€ Festpreis ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst", canonical } = Astro.props;
+
+const currentUrl = canonical || Astro.url.href;
+
+// FAQ Schema Markup
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was kostet die Türöffnung beim Schlüsseldienst Kaufbeuren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unsere Türöffnung beginnt bereits ab 29€ Festpreis. Der endgültige Preis hängt von der Art des Schlosses und dem Aufwand ab. Wir nennen Ihnen den Preis vorab am Telefon - ohne versteckte Kosten."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "Wie schnell ist der Schlüsseldienst Kaufbeuren vor Ort?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wir sind in der Regel binnen 10-30 Minuten bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um noch schnellere Anfahrtszeiten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist der Schlüsseldienst auch nachts und am Wochenende verfügbar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, unser 24h Notdienst ist rund um die Uhr verfügbar - auch nachts, an Wochenenden und Feiertagen. Türöffnung, wenn Sie sie brauchen."
+      }
+    }
+  ]
+};
+
+// Business Schema Markup
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocksmithBusiness", 
+  "name": "Schlüsseldienst Kaufbeuren",
+  "description": "Professioneller Schlüsseldienst in Kaufbeuren - 24h Notdienst, Türöffnung, Schlosswechsel und Einbruchschutz",
+  "telephone": "+49-8341-XXXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kaufbeuren",
+    "@addressRegion": "Bayern", 
+    "addressCountry": "DE"
+  },
+  "areaServed": "Kaufbeuren",
+  "serviceType": ["Türöffnung", "Schlosswechsel", "Auto-Schlüsseldienst", "Einbruchschutz", "Tresoröffnung"],
+  "openingHours": "Mo-Su 00:00-24:00",
+  "priceRange": "€€",
+  "paymentAccepted": ["Cash", "Credit Card"]
+};
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Primary SEO Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={currentUrl}>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={currentUrl}>
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:locale" content="de_DE">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={currentUrl}>
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    
+    <!-- Local Business Keywords -->
+    <meta name="keywords" content="Schlüsseldienst Kaufbeuren, Aufsperrdienst Kaufbeuren, Türöffnung Kaufbeuren, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)}></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+    <slot />
+    
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html>
+
+<style is:global>
+    :root {
+        /* Professional Blue Theme */
+        --primary-blue: #1e3a8a;
+        --primary-blue-light: #3b82f6;
+        --primary-blue-dark: #1e40af;
+        --secondary-blue: #0ea5e9;
+        --accent-blue: #06b6d4;
+        
+        /* Neutral Colors */
+        --gray-50: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-300: #cbd5e1;
+        --gray-400: #94a3b8;
+        --gray-500: #64748b;
+        --gray-600: #475569;
+        --gray-700: #334155;
+        --gray-800: #1e293b;
+        --gray-900: #0f172a;
+        
+        /* Status Colors */
+        --success: #10b981;
+        --success-light: #34d399;
+        --warning: #f59e0b;
+        --error: #ef4444;
+        
+        /* Typography */
+        --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-sizes-xs: 0.75rem;
+        --font-sizes-sm: 0.875rem;
+        --font-sizes-base: 1rem;
+        --font-sizes-lg: 1.125rem;
+        --font-sizes-xl: 1.25rem;
+        --font-sizes-2xl: 1.5rem;
+        --font-sizes-3xl: 1.875rem;
+        --font-sizes-4xl: 2.25rem;
+        --font-sizes-5xl: 3rem;
+        
+        /* Spacing */
+        --spacing-1: 0.25rem;
+        --spacing-2: 0.5rem;
+        --spacing-3: 0.75rem;
+        --spacing-4: 1rem;
+        --spacing-5: 1.25rem;
+        --spacing-6: 1.5rem;
+        --spacing-8: 2rem;
+        --spacing-10: 2.5rem;
+        --spacing-12: 3rem;
+        --spacing-16: 4rem;
+        --spacing-20: 5rem;
+        
+        /* Border Radius */
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1rem;
+        
+        /* Shadows */
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        margin: 0;
+        padding: 0;
+        background-color: var(--gray-50);
+        color: var(--gray-800);
+        line-height: 1.6;
+        font-size: var(--font-sizes-base);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        color: var(--gray-900);
+    }
+
+    h1 {
+        font-size: var(--font-sizes-4xl);
+    }
+
+    h2 {
+        font-size: var(--font-sizes-3xl);
+    }
+
+    h3 {
+        font-size: var(--font-sizes-2xl);
+    }
+
+    p {
+        margin: 0 0 var(--spacing-4) 0;
+    }
+
+    a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    a:hover {
+        color: var(--primary-blue-light);
+    }
+
+    button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+        transition: all 0.2s ease;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style> 
