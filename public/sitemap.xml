@@ -8,28 +8,6 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Service areas -->
-  <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/kaufbeuren-zentrum/</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/neugablonz/</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/oberbeuren/</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
   <!-- Service pages -->
   <url>
     <loc>https://schluesseldienst-kaufbeuren.de/tueroeffnung/</loc>
@@ -45,30 +23,31 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Legal pages -->
   <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/schlosswechsel/</loc>
+    <loc>https://schluesseldienst-kaufbeuren.de/impressum/</loc>
     <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://schluesseldienst-kaufbeuren.de/datenschutz/</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Blog pages -->
+  <url>
+    <loc>https://schluesseldienst-kaufbeuren.de/blog/</loc>
+    <lastmod>2025-01-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/einbruchschutz/</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Contact and info pages -->
-  <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/kontakt/</loc>
-    <lastmod>2025-01-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://schluesseldienst-kaufbeuren.de/preise/</loc>
+    <loc>https://schluesseldienst-kaufbeuren.de/blog/einbruchschutz-tipps-zuhause/</loc>
     <lastmod>2025-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
