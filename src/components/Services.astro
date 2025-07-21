@@ -18,24 +18,6 @@ const services = [
         description: 'Sicherheitsschlösser, Zylinderwechsel und Schlossreparaturen von Markenherstellern. Beratung inklusive.',
         keywords: 'Schlosswechsel, Zylindertausch, Sicherheitsschloss',
         features: ['Markenhersteller', 'Sicherheitsberatung', 'Garantie inklusive']
-    },
-    {
-        title: 'Einbruchschutz',
-        description: 'Professionelle Sicherheitstechnik und Beratung für optimalen Einbruchschutz Ihres Zuhauses oder Betriebs.',
-        keywords: 'Einbruchschutz, Sicherheitstechnik, Sicherheitsberatung',
-        features: ['Kostenlose Beratung', 'Modernste Technik', 'Zertifiziert']
-    },
-    {
-        title: 'Tresoröffnung',
-        description: '24h Tresor-Notdienst bei vergessenen Codes oder defekten Schlössern. Diskret und professionell für alle Tresortypen.',
-        keywords: 'Tresoröffnung, Safe öffnen, Tresor-Notdienst',
-        features: ['Diskret & sicher', 'Alle Tresortypen', '24h verfügbar']
-    },
-    {
-        title: 'Schlüssel nachmachen',
-        description: 'Schneller Service für alle Schlüsseltypen. Auch Sicherheitsschlüssel mit Berechtigungsnachweis vor Ort möglich.',
-        keywords: 'Schlüssel nachmachen, Schlüssel kopieren, Ersatzschlüssel',
-        features: ['Vor Ort Service', 'Alle Schlüsseltypen', 'Sofort verfügbar']
     }
 ];
 ---
@@ -69,10 +51,12 @@ const services = [
                         </ul>
                         
                         <div class="service-actions">
-                            <button class="service-btn primary">
+                            <button 
+                                class="service-btn primary"
+                                onclick="window.location.href='tel:+491604996655'"
+                            >
                                 Jetzt beauftragen
                             </button>
-
                         </div>
                     </div>
                 </article>

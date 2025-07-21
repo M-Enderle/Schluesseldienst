@@ -5,7 +5,10 @@
 <header>
     <div class="header-container">
         <a href="/" class="logo" aria-label="Schlüsseldienst Kaufbeuren Startseite">
-            <span class="logo-text">Schlüsseldienst Kaufbeuren</span>
+            <span class="logo-text">
+                <span class="logo-line">Schlüsseldienst</span>
+                <span class="logo-line">Kaufbeuren</span>
+            </span>
         </a>
         <div class="header-actions">
             <div class="phone-info">
@@ -36,6 +39,8 @@
         justify-content: space-between;
         padding: var(--spacing-4) var(--spacing-6);
         gap: var(--spacing-8);
+        min-width: 0;
+        overflow: hidden;
     }
 
     .logo {
@@ -47,20 +52,28 @@
         width: fit-content;
     }
 
+
+
     .logo-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        line-height: 1;
+    }
+
+    .logo-line {
         font-size: var(--font-sizes-xl);
         font-weight: 700;
-        color: white;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
-        line-height: 1.2;
+        white-space: nowrap;
     }
 
     .header-actions {
         display: flex;
         align-items: center;
         gap: var(--spacing-4);
+        min-width: 0;
+        flex-shrink: 0;
     }
 
     .phone-info {
@@ -68,12 +81,15 @@
         flex-direction: column;
         align-items: flex-end;
         color: white;
+        min-width: 0;
+        flex-shrink: 1;
     }
 
     .phone-label {
         font-size: var(--font-sizes-xs);
         opacity: 0.8;
         font-weight: 500;
+        white-space: nowrap;
     }
 
     .phone-number {
@@ -82,6 +98,7 @@
         letter-spacing: 0.5px;
         color: white;
         text-align: right;
+        white-space: nowrap;
     }
 
     .contact-btn {
@@ -104,16 +121,60 @@
     @media (max-width: 768px) {
         .header-container {
             padding: var(--spacing-3) var(--spacing-4);
+            gap: var(--spacing-4);
         }
 
         .contact-btn {
             display: none;
         }
+
+        .logo-line {
+            font-size: var(--font-sizes-lg);
+        }
     }
 
-    @media (max-width: 385px) {
-        .logo-text {
-            display: none;
+    @media (max-width: 640px) {
+        .header-container {
+            gap: var(--spacing-3);
+        }
+
+        .phone-number {
+            font-size: var(--font-sizes-base);
+        }
+
+        .phone-label {
+            font-size: 0.7rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header-container {
+            padding: var(--spacing-2) var(--spacing-3);
+            gap: var(--spacing-2);
+        }
+
+        .logo-line {
+            font-size: var(--font-sizes-base);
+        }
+    }
+
+    @media (max-width: 320px) {
+        .logo-line {
+            font-size: var(--font-sizes-sm);
+        }
+        
+        .phone-info {
+            align-items: center;
+        }
+        
+        .phone-number {
+            font-size: var(--font-sizes-sm);
+            text-align: center;
+        }
+        
+        .phone-label {
+            font-size: 0.6rem;
+            text-align: center;
         }
     }
 </style>
