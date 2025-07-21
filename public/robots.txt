@@ -1,18 +1,4 @@
 User-agent: *
 Allow: /
 
-# Specific paths for better crawling
-Allow: /services/
-Allow: /contact/
-Allow: /about/
 
-# Block admin areas (if any)
-Disallow: /admin/
-Disallow: /_astro/
-Disallow: /node_modules/
-
-# Sitemap location
-Sitemap: https://schluesseldienst-kaufbeuren.de/sitemap.xml
-
-# Crawl-delay to be respectful to server resources
-Crawl-delay: 1
