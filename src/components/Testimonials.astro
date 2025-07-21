@@ -1,37 +1,39 @@
 ---
+import { Image } from 'astro:assets';
+
 // Testimonials section component with modern professional design
 const testimonials = [
     {
-        name: "Maria Schmidt",
+        name: "Thomas Weber",
         location: "Kaufbeuren Zentrum",
         rating: 5,
-        text: "Super schneller Service! War in 15 Minuten da und hat meine Tür professionell geöffnet. Preis wie am Telefon vereinbart - 35€. Sehr empfehlenswert!",
+        text: "Super schneller Service! War in 15 Minuten da und hat meine Tür professionell geöffnet. Preis wie am Telefon vereinbart. Sehr empfehlenswert!",
         service: "Türöffnung",
-        avatar: "https://via.placeholder.com/60x60/3b82f6/ffffff?text=MS"
+        avatar: "assets/images/testamonials/1.jpg"
     },
     {
-        name: "Thomas Weber",
+        name: "Amelie Vogl",
         location: "Kaufbeuren Oberbeuren",
         rating: 5,
         text: "Mitten in der Nacht ausgesperrt. Der 24h Notdienst war schnell da und sehr freundlich. Faire Preise auch nachts. Danke!",
         service: "Nacht-Notdienst",
-        avatar: "https://via.placeholder.com/60x60/10b981/ffffff?text=TW"
+        avatar: "assets/images/testamonials/2.jpeg"
     },
     {
-        name: "Familie Müller",
+        name: "Nils Köhler",
         location: "Kaufbeuren Neugablonz",
         rating: 5,
         text: "Schlosswechsel nach Einbruchsversuch. Hervorragende Beratung zu Sicherheitsschlössern. Fühlen uns jetzt viel sicherer.",
         service: "Schlosswechsel & Sicherheitsberatung",
-        avatar: "https://via.placeholder.com/60x60/f59e0b/ffffff?text=FM"
+        avatar: "assets/images/testamonials/3.webp"
     },
     {
-        name: "Andreas Klein",
+        name: "Andrea Klein",
         location: "Kaufbeuren Hirschzell", 
         rating: 5,
         text: "Auto-Schlüsseldienst war top! Schnell, professionell und ohne Kratzer am Lack. Preis-Leistung stimmt definitiv.",
         service: "Auto-Schlüsseldienst",
-        avatar: "https://via.placeholder.com/60x60/06b6d4/ffffff?text=AK"
+        avatar: "assets/images/testamonials/4.jpeg"
     }
 ];
 
@@ -77,7 +79,7 @@ const trustMetrics = [
                 <article class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="customer-info">
-                            <img src={testimonial.avatar} alt={testimonial.name} class="customer-avatar">
+                            <Image src={testimonial.avatar} alt={testimonial.name} class="customer-avatar" width={50} height={50} />
                             <div class="customer-details">
                                 <h3 class="customer-name">{testimonial.name}</h3>
                                 <p class="customer-location">{testimonial.location}</p>
@@ -85,7 +87,7 @@ const trustMetrics = [
                         </div>
                         <div class="rating">
                             {Array.from({length: testimonial.rating}, (_, i) => (
-                                <img src="https://via.placeholder.com/16x16/f59e0b/ffffff?text=★" alt="Star" class="star" key={i}>
+                                <Image src="assets/icons/star.svg" alt="Star" loading="lazy" width={16} height={16} key={i} />
                             ))}
                         </div>
                     </div>
@@ -118,13 +120,10 @@ const trustMetrics = [
             <div class="cta-content">
                 <h3>Werden auch Sie unser zufriedener Kunde!</h3>
                 <p>Rufen Sie jetzt an für schnelle und professionelle Hilfe</p>
-                <button class="cta-button">
-                    <span class="cta-text">Jetzt anrufen: 0800-123456</span>
+                <button class="cta-button" onclick="window.location.href='tel:+491604996655'">
+                    <span class="cta-text">Jetzt anrufen: +49 1604 996655</span>
                     <span class="cta-subtext">Kostenlose Beratung & Kostenvoranschlag</span>
                 </button>
-            </div>
-            <div class="cta-image">
-                <img src="https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Happy+Customer" alt="Zufriedener Kunde" loading="lazy">
             </div>
         </div>
     </div>
@@ -190,17 +189,6 @@ const trustMetrics = [
         position: relative;
     }
     
-    .testimonial-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--success), var(--success-light));
-        border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-    }
-    
     .testimonial-card:hover {
         transform: translateY(-6px);
         box-shadow: var(--shadow-xl);
@@ -225,6 +213,7 @@ const trustMetrics = [
         height: 50px;
         border-radius: 50%;
         border: 2px solid var(--success);
+        object-fit: cover;
     }
     
     .customer-details {

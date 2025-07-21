@@ -1,91 +1,76 @@
 ---
-// Partners section component with modern professional design
-const partners = [
-    { 
-        name: "ABUS", 
-        alt: "ABUS - Premium Sicherheitsschlösser Partner",
-        logo: "https://via.placeholder.com/140x70/1e3a8a/ffffff?text=ABUS",
-        description: "Weltmarktführer Sicherheitstechnik"
-    },
-    { 
-        name: "ASSA ABLOY", 
-        alt: "ASSA ABLOY - Weltmarktführer Schließsysteme",
-        logo: "https://via.placeholder.com/140x70/3b82f6/ffffff?text=ASSA+ABLOY",
-        description: "Global Leader in Access Solutions"
-    },
-    { 
-        name: "DOM", 
-        alt: "DOM - Deutsche Qualitätsschlösser Partner",
-        logo: "https://via.placeholder.com/140x70/10b981/ffffff?text=DOM",
-        description: "Deutsche Premium Schlösser"
-    }, 
-    { 
-        name: "KABA", 
-        alt: "Kaba - Innovative Zutrittslösungen Partner",
-        logo: "https://via.placeholder.com/140x70/f59e0b/ffffff?text=KABA",
-        description: "Innovative Zutrittskontrolle"
-    },
-    { 
-        name: "BKS", 
-        alt: "BKS - Traditionelle Schloss-Manufaktur Partner",
-        logo: "https://via.placeholder.com/140x70/06b6d4/ffffff?text=BKS",
-        description: "Deutsche Schloss-Manufaktur"
-    },
-    { 
-        name: "EVVA", 
-        alt: "EVVA - Hochsicherheitsschlösser Partner",
-        logo: "https://via.placeholder.com/140x70/ef4444/ffffff?text=EVVA",
-        description: "Hochsicherheitstechnologie"
-    }
-];
+import { Image } from 'astro:assets';
 ---
 
 <section class="partners">
     <div class="partners-container">
         <div class="section-header">
             <div class="header-badge">
-                <span>Vertrauensvolle Partnerschaften</span>
+                <span>Vertrauen & Qualität</span>
             </div>
-            <h2>Wir arbeiten mit den besten Markenherstellern</h2>
+            <h2>Zertifizierter ADAC Partner für Ihren Schlüsseldienst</h2>
             <p class="section-description">
-                Qualität und Zuverlässigkeit stehen bei unserem Schlüsseldienst in Kaufbeuren an erster Stelle. 
-                Deshalb vertrauen wir ausschließlich auf renommierte Markenhersteller für Sicherheitstechnik.
+                Als offizieller ADAC Partner stehen wir für höchste Qualität und Vertrauen. 
+                Profitieren Sie von unserer zertifizierten Expertise und fairen Festpreisen.
             </p>
         </div>
         
-        <div class="partners-grid">
-            {partners.map((partner) => (
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img 
-                            src={partner.logo}
-                            alt={partner.alt}
-                            loading="lazy"
-                            width="140"
-                            height="70"
-                        >
-                    </div>
-                    <div class="partner-info">
-                        <h3 class="partner-name">{partner.name}</h3>
-                        <p class="partner-description">{partner.description}</p>
+        <div class="partnership-content">
+            <div class="partnership-info">
+                <div class="info-card">
+                    <h3>ADAC Qualitätsstandards</h3>
+                    <p>
+                        Wir erfüllen alle ADAC Qualitätskriterien für Schlüsseldienste und werden regelmäßig 
+                        geprüft. Das bedeutet für Sie: Transparente Preise, professionelle Ausführung und 
+                        kompetente Beratung.
+                    </p>
+                    
+                    <ul class="quality-features">
+                        <li class="feature-item">
+                            <span>Zertifizierte Techniker mit ADAC Schulung</span>
+                        </li>
+                        <li class="feature-item">
+                            <span>Transparente Festpreise ohne versteckte Kosten</span>
+                        </li>
+                        <li class="feature-item">
+                            <span>Professionelle Ausrüstung und Werkzeuge</span>
+                        </li>
+                        <li class="feature-item">
+                            <span>Regelmäßige Qualitätskontrolle durch ADAC</span>
+                        </li>
+                                        </ul>
+                </div>
+            </div>
+            
+            <div class="partnership-visual">
+                <div class="image-container">
+                    <Image 
+                        src="assets/images/schluesseldienst-visual_720x540.jpg" 
+                        alt="ADAC Partner Schlüsseldienst Kaufbeuren - Professioneller Service" 
+                        loading="lazy" 
+                        width="720" 
+                        height="540"
+                        class="partnership-image"
+                    />
+                    <div class="image-overlay">
+                        <div class="adac-badge">
+                            <span class="badge-title">ADAC</span>
+                            <span class="badge-subtitle">Partner</span>
+                        </div>
                     </div>
                 </div>
-            ))}
+            
+            </div>
         </div>
         
-        <div class="quality-assurance">
-            <div class="assurance-content">
-                <div class="assurance-icon">
-                    <img src="https://via.placeholder.com/80x80/10b981/ffffff?text=✓" alt="Quality Assured">
-                </div>
-                <div class="assurance-text">
-                    <h3>Garantiert hochwertige Qualität</h3>
-                    <p>
-                        Alle unsere Partner sind zertifizierte Markenhersteller mit jahrzehntelanger Erfahrung 
-                        in der Entwicklung von Sicherheitstechnik. So garantieren wir Ihnen höchste Qualität 
-                        und Langlebigkeit bei allen unseren Produkten und Dienstleistungen.
-                    </p>
-                </div>
+        <div class="partnership-cta">
+            <div class="cta-content">
+                <h3>Vertrauen Sie dem ADAC Partner in Kaufbeuren</h3>
+                <p>Rufen Sie uns an für schnelle, professionelle Hilfe nach ADAC Standard</p>
+                <button class="cta-button" onclick="window.location.href='tel:+491604996655'">
+                    <span class="cta-text">Jetzt anrufen: +49 1604 996655</span>
+                    <span class="cta-subtext">ADAC Qualität garantiert</span>
+                </button>
             </div>
         </div>
     </div>
@@ -93,8 +78,8 @@ const partners = [
 
 <style>
     .partners {
-        padding: var(--spacing-16) var(--spacing-6);
-        background: white;
+        padding: var(--spacing-20) var(--spacing-6);
+        background: linear-gradient(135deg, white 0%, var(--gray-50) 50%, white 100%);
     }
     
     .partners-container {
@@ -105,24 +90,25 @@ const partners = [
     .section-header {
         text-align: center;
         max-width: 800px;
-        margin: 0 auto var(--spacing-12);
+        margin: 0 auto var(--spacing-16);
     }
     
     .header-badge {
         display: inline-flex;
         align-items: center;
-        background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+        background: linear-gradient(135deg, #FFD700, #FFA500);
         color: white;
         padding: var(--spacing-2) var(--spacing-4);
         border-radius: var(--radius-xl);
         font-size: var(--font-sizes-sm);
         font-weight: 600;
         margin-bottom: var(--spacing-6);
+        box-shadow: var(--shadow-md);
     }
     
     .partners h2 {
-        font-size: var(--font-sizes-3xl);
-        margin-bottom: var(--spacing-4);
+        font-size: var(--font-sizes-4xl);
+        margin-bottom: var(--spacing-6);
         color: var(--gray-900);
         line-height: 1.2;
     }
@@ -134,174 +120,225 @@ const partners = [
         margin: 0;
     }
     
-    .partners-grid {
+    .partnership-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--spacing-6);
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-12);
+        align-items: center;
         margin-bottom: var(--spacing-16);
     }
     
-    .partner-card {
-        background: var(--gray-50);
-        border: 1px solid var(--gray-200);
-        border-radius: var(--radius-xl);
-        padding: var(--spacing-6);
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .partner-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-    }
-    
-    .partner-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary-blue-light);
-        background: white;
-    }
-    
-    .partner-card:hover::before {
-        transform: scaleX(1);
-    }
-    
-    .partner-logo {
-        margin-bottom: var(--spacing-4);
+    .partnership-info {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 80px;
+        flex-direction: column;
+        gap: var(--spacing-8);
     }
     
-    .partner-logo img {
-        width: 140px;
-        height: 70px;
-        object-fit: contain;
-        border-radius: var(--radius-md);
+    .info-card {
+        background: white;
+        padding: var(--spacing-8);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--gray-200);
         transition: all 0.3s ease;
     }
     
-    .partner-card:hover .partner-logo img {
-        transform: scale(1.05);
+    .info-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-xl);
+        border-color: #FFD700;
     }
     
-    .partner-info {
-        text-align: center;
-    }
-    
-    .partner-name {
-        font-size: var(--font-sizes-lg);
+    .info-card h3 {
+        font-size: var(--font-sizes-2xl);
         font-weight: 700;
         color: var(--gray-900);
-        margin-bottom: var(--spacing-2);
+        margin-bottom: var(--spacing-4);
     }
     
-    .partner-description {
-        font-size: var(--font-sizes-sm);
+    .info-card p {
         color: var(--gray-600);
+        line-height: 1.6;
+        margin-bottom: var(--spacing-6);
+    }
+    
+    .quality-features {
+        list-style: none;
+        padding: 0;
         margin: 0;
-        line-height: 1.4;
     }
     
-    .quality-assurance {
-        background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
-        border-radius: var(--radius-xl);
-        padding: var(--spacing-10);
-        color: white;
-        box-shadow: var(--shadow-lg);
-    }
-    
-    .assurance-content {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: var(--spacing-6);
-        align-items: center;
-    }
-    
-    .assurance-icon {
-        width: 80px;
-        height: 80px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
+    .feature-item {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        gap: var(--spacing-3);
+        margin-bottom: var(--spacing-3);
+        font-size: var(--font-sizes-sm);
+        color: var(--gray-700);
+    }
+    
+    .feature-item::before {
+        content: '✓';
+        color: #FFD700;
+        font-weight: bold;
+        font-size: var(--font-sizes-lg);
         flex-shrink: 0;
     }
     
-    .assurance-text h3 {
-        font-size: var(--font-sizes-2xl);
+
+    
+    .partnership-visual {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-6);
+    }
+    
+    .image-container {
+        position: relative;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-xl);
+        transition: all 0.3s ease;
+    }
+    
+    .image-container:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .image-container:hover .partnership-image {
+        transform: scale(1.05);
+    }
+    
+    .partnership-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        top: var(--spacing-4);
+        right: var(--spacing-4);
+    }
+    
+    .adac-badge {
+        background: #FFD700;
+        color: white;
+        padding: var(--spacing-3) var(--spacing-4);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .adac-badge:hover {
+        transform: scale(1.1);
+        box-shadow: var(--shadow-xl);
+        background: #FFA500;
+    }
+    
+    .badge-title {
+        display: block;
+        font-size: var(--font-sizes-lg);
+        font-weight: 800;
+        line-height: 1;
+    }
+    
+    .badge-subtitle {
+        display: block;
+        font-size: var(--font-sizes-sm);
+        font-weight: 600;
+        opacity: 0.9;
+    }
+    
+
+    
+    .partnership-cta {
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        border-radius: var(--radius-xl);
+        padding: var(--spacing-12);
+        text-align: center;
+        box-shadow: var(--shadow-xl);
+        width: 100%;
+        margin-top: var(--spacing-4);
+    }
+    
+    .cta-content h3 {
+        font-size: var(--font-sizes-3xl);
         font-weight: 700;
-        margin-bottom: var(--spacing-3);
+        margin-bottom: var(--spacing-4);
         color: white;
     }
     
-    .assurance-text p {
+    .cta-content p {
         font-size: var(--font-sizes-lg);
-        line-height: 1.6;
-        margin: 0;
+        margin-bottom: var(--spacing-6);
+        color: white;
         opacity: 0.95;
+    }
+    
+    .cta-button {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        color: white;
+        padding: var(--spacing-5) var(--spacing-8);
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .cta-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .cta-text {
+        display: block;
+        font-size: var(--font-sizes-lg);
+        font-weight: 700;
+        margin-bottom: var(--spacing-1);
+    }
+    
+    .cta-subtext {
+        display: block;
+        font-size: var(--font-sizes-sm);
+        opacity: 0.9;
+    }
+    
+    @media (max-width: 1024px) {
+        .partnership-content {
+            grid-template-columns: 1fr;
+            gap: var(--spacing-8);
+        }
     }
     
     @media (max-width: 768px) {
         .partners {
-            padding: var(--spacing-12) var(--spacing-4);
-        }
-        
-        .partners-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-4);
+            padding: var(--spacing-16) var(--spacing-4);
         }
         
         .partners h2 {
-            font-size: var(--font-sizes-2xl);
+            font-size: var(--font-sizes-3xl);
         }
         
-        .section-description {
-            font-size: var(--font-sizes-base);
+        .partnership-content {
+            gap: var(--spacing-6);
         }
         
-        .partner-card {
-            padding: var(--spacing-4);
-        }
-        
-        .partner-logo img {
-            width: 120px;
-            height: 60px;
-        }
-        
-        .quality-assurance {
+        .info-card {
             padding: var(--spacing-6);
         }
         
-        .assurance-content {
-            grid-template-columns: 1fr;
-            text-align: center;
-            gap: var(--spacing-4);
+        .partnership-cta {
+            padding: var(--spacing-8);
         }
         
-        .assurance-text h3 {
-            font-size: var(--font-sizes-xl);
-        }
-        
-        .assurance-text p {
-            font-size: var(--font-sizes-base);
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .partners-grid {
-            grid-template-columns: 1fr;
+        .cta-content h3 {
+            font-size: var(--font-sizes-2xl);
         }
     }
 </style> 

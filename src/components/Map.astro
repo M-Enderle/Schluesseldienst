@@ -1,0 +1,78 @@
+---
+// This component renders a Leaflet map showing the outline of a city (e.g., Kaufbeuren)
+// Using Leaflet from a CDN to avoid module resolution issues
+---
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+
+<div id="map-container">
+  <div id="map"></div>
+</div>
+
+<style>
+  #map-container {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin: var(--spacing-6) auto;
+    background: white;
+    border: 1px solid var(--gray-200);
+    max-width: 1200px;
+    width: 95%;
+    position: relative;
+    z-index: 1;
+  }
+
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    #map-container {
+      width: 95%; /* Reduce width on mobile for better spacing */
+      margin: var(--spacing-4) auto;
+    }
+  }
+</style>
+
+<script client:load>
+  const cityOutline = {
+    "type": "FeatureCollection",
+    "features": [
+      // Insert your GeoJSON features here
+    ]
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const map = L.map('map', {
+      zoomControl: false, // Disable zoom buttons
+      scrollWheelZoom: false, // Disable zooming with mouse wheel
+      dragging: false, // Disable panning/dragging
+      touchZoom: false, // Disable touch zoom on mobile
+      doubleClickZoom: false, // Disable double-click zoom
+      boxZoom: false, // Disable box zoom
+      tap: false, // Disable tap interactions on mobile
+      keyboard: false // Disable keyboard navigation
+    }).setView([47.883, 10.617], 11); // Center on Kaufbeuren
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add the city outline (if available)
+    if (cityOutline.features.length > 0) {
+      L.geoJSON(cityOutline, {
+        style: {
+          color: '#0077ff',
+          weight: 3,
+          fill: false
+        }
+      }).addTo(map);
+    }
+  });
+</script>
+

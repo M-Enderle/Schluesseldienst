@@ -5,42 +5,36 @@ const services = [
         title: 'Türöffnung Kaufbeuren',
         description: 'Professionelle Türöffnung ohne Beschädigung ab 29€ Festpreis. Schnell, sicher und zuverlässig für alle Schlosstypen.',
         keywords: 'Türöffnung, Aufsperrdienst, Notdienst',
-        image: 'https://via.placeholder.com/300x200/1e3a8a/ffffff?text=Door+Opening+Service',
         features: ['Ohne Beschädigung', 'Ab 29€ Festpreis', 'Alle Schlosstypen']
     },
     {
         title: 'Auto-Schlüsseldienst',
         description: 'Fahrzeug ausgesperrt? Wir öffnen Ihr Auto beschädigungsfrei - alle Marken und Modelle, moderne Fahrzeugtechnik.',
         keywords: 'Auto öffnen, Fahrzeugöffnung, KFZ-Schlüsseldienst',
-        image: 'https://via.placeholder.com/300x200/3b82f6/ffffff?text=Car+Key+Service',
         features: ['Alle Fahrzeugmarken', 'Moderne Technik', 'Beschädigungsfrei']
     },
     {
         title: 'Schlosswechsel & Reparatur',
         description: 'Sicherheitsschlösser, Zylinderwechsel und Schlossreparaturen von Markenherstellern. Beratung inklusive.',
         keywords: 'Schlosswechsel, Zylindertausch, Sicherheitsschloss',
-        image: 'https://via.placeholder.com/300x200/10b981/ffffff?text=Lock+Replacement',
         features: ['Markenhersteller', 'Sicherheitsberatung', 'Garantie inklusive']
     },
     {
         title: 'Einbruchschutz',
         description: 'Professionelle Sicherheitstechnik und Beratung für optimalen Einbruchschutz Ihres Zuhauses oder Betriebs.',
         keywords: 'Einbruchschutz, Sicherheitstechnik, Sicherheitsberatung',
-        image: 'https://via.placeholder.com/300x200/f59e0b/ffffff?text=Security+Systems',
         features: ['Kostenlose Beratung', 'Modernste Technik', 'Zertifiziert']
     },
     {
         title: 'Tresoröffnung',
         description: '24h Tresor-Notdienst bei vergessenen Codes oder defekten Schlössern. Diskret und professionell für alle Tresortypen.',
         keywords: 'Tresoröffnung, Safe öffnen, Tresor-Notdienst',
-        image: 'https://via.placeholder.com/300x200/06b6d4/ffffff?text=Safe+Opening',
         features: ['Diskret & sicher', 'Alle Tresortypen', '24h verfügbar']
     },
     {
         title: 'Schlüssel nachmachen',
         description: 'Schneller Service für alle Schlüsseltypen. Auch Sicherheitsschlüssel mit Berechtigungsnachweis vor Ort möglich.',
         keywords: 'Schlüssel nachmachen, Schlüssel kopieren, Ersatzschlüssel',
-        image: 'https://via.placeholder.com/300x200/ef4444/ffffff?text=Key+Duplication',
         features: ['Vor Ort Service', 'Alle Schlüsseltypen', 'Sofort verfügbar']
     }
 ];
@@ -62,15 +56,6 @@ const services = [
         <div class="services-grid">
             {services.map((service) => (
                 <article class="service-card">
-                    <div class="service-image">
-                        <img src={service.image} alt={service.title} loading="lazy">
-                        <div class="service-overlay">
-                            <div class="service-keywords">
-                                {service.keywords}
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="service-content">
                         <h3 class="service-title">{service.title}</h3>
                         <p class="service-description">{service.description}</p>
@@ -78,9 +63,6 @@ const services = [
                         <ul class="service-features">
                             {service.features.map((feature) => (
                                 <li class="feature-item">
-                                    <span class="feature-icon">
-                                        <img src="https://via.placeholder.com/16x16/10b981/ffffff?text=✓" alt="Check">
-                                    </span>
                                     {feature}
                                 </li>
                             ))}
@@ -90,9 +72,7 @@ const services = [
                             <button class="service-btn primary">
                                 Jetzt beauftragen
                             </button>
-                            <button class="service-btn secondary">
-                                Mehr Details
-                            </button>
+
                         </div>
                     </div>
                 </article>
@@ -106,13 +86,11 @@ const services = [
                     Rufen Sie jetzt an für sofortige Hilfe und kostenlose Beratung
                 </p>
                 <div class="cta-phone">
-                    <span class="phone-number">0800-123456</span>
+                    <a href="tel:+491604996655" class="phone-number">+49 1604 996655</a>
                     <span class="phone-description">Kostenloser Anruf - 24h erreichbar</span>
                 </div>
             </div>
-            <div class="cta-image">
-                <img src="https://via.placeholder.com/400x300/1e3a8a/ffffff?text=Emergency+Service" alt="24h Notdienst" loading="lazy">
-            </div>
+
         </div>
     </div>
 </section>
@@ -233,9 +211,10 @@ const services = [
     }
     
     .service-features {
-        list-style: none;
         padding: 0;
         margin: 0 0 var(--spacing-6) 0;
+        list-style: disc;
+        padding-left: 0.5em;
     }
     
     .feature-item {
@@ -245,6 +224,14 @@ const services = [
         margin-bottom: var(--spacing-2);
         font-size: var(--font-sizes-sm);
         color: var(--gray-700);
+    }
+    
+    .feature-item::before {
+        content: '•';
+        color: var(--primary-blue, #1e3a8a);
+        margin-right: 0.5em;
+        font-size: 1.2em;
+        line-height: 1;
     }
     
     .feature-icon {
@@ -299,8 +286,6 @@ const services = [
         background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
         border-radius: var(--radius-xl);
         padding: var(--spacing-12);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: var(--spacing-10);
         align-items: center;
         color: white;
@@ -333,7 +318,6 @@ const services = [
         display: block;
         font-size: var(--font-sizes-3xl);
         font-weight: 800;
-        margin-bottom: var(--spacing-2);
         color: white;
     }
     

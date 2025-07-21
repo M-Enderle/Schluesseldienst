@@ -4,10 +4,11 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Partners from '../components/Partners.astro';
 import Services from '../components/Services.astro';
+import Quote from '../components/Quote.astro';
 import FAQ from '../components/FAQ.astro';
 import Testimonials from '../components/Testimonials.astro';
-import News from '../components/News.astro';
 import Footer from '../components/Footer.astro';
+import Map from '../components/Map.astro';
 
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
@@ -19,6 +20,12 @@ import  SpeedInsights  from "@vercel/speed-insights/astro"
     <Header />
     <main>
         <Hero />
+        <Services />
+        <Quote />
+        <Partners />
+        <FAQ />
+        <Testimonials />
+        <Map />
     </main>
     <Footer />
 </Layout>

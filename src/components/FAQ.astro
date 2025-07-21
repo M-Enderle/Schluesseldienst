@@ -63,17 +63,11 @@ const faqs = [
           Unser erfahrenes Team steht Ihnen jederzeit zur Verfügung. Rufen Sie uns an für eine kostenlose Beratung oder einen Kostenvoranschlag.
         </p>
         <div class="contact-actions">
-          <button class="contact-btn primary">
-            <span class="btn-text">Jetzt anrufen: 0800-123456</span>
+          <button class="contact-btn primary" onclick="window.location.href='tel:+491604996655'">
+            <span class="btn-text">Jetzt anrufen: +49 1604 996655</span>
             <span class="btn-subtext">Kostenlose Beratung</span>
           </button>
-          <button class="contact-btn secondary">
-            Rückruf anfordern
-          </button>
         </div>
-      </div>
-      <div class="contact-image">
-        <img src="https://via.placeholder.com/300x200/1e3a8a/ffffff?text=Professional+Support" alt="Professionelle Beratung" loading="lazy">
       </div>
     </div>
   </div>
@@ -189,10 +183,6 @@ const faqs = [
     padding: var(--spacing-10);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--spacing-10);
-    align-items: center;
     border: 1px solid var(--gray-200);
   }
   
