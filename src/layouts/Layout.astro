@@ -5,7 +5,7 @@ export interface Props {
     canonical?: string;
 }
 
-const { title, description = "Schlüsseldienst Kaufbeuren ✅ in 10-30 Minuten vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst", canonical } = Astro.props;
+const { title, description = "Schlüsseldienst Kaufbeuren ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst", canonical } = Astro.props;
 
 const currentUrl = canonical || Astro.url.href;
 
@@ -19,7 +19,7 @@ const faqSchema = {
       "name": "Was kostet die Türöffnung beim Schlüsseldienst Kaufbeuren?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Der endgültige Preis hängt von der Art des Schlosses und dem Aufwand ab. Wir nennen Ihnen den Preis vorab am Telefon - ohne versteckte Kosten."
+        "text": "Wir arbeiten mit transparenten Festpreisen ohne versteckte Kosten. Kostenvoranschlag am Telefon."
       }
     },
     {
@@ -27,7 +27,7 @@ const faqSchema = {
       "name": "Wie schnell ist der Schlüsseldienst Kaufbeuren vor Ort?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Wir sind in der Regel binnen 10-30 Minuten bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um noch schnellere Anfahrtszeiten."
+        "text": "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt."
       }
     },
     {
@@ -57,7 +57,7 @@ const businessSchema = {
   "areaServed": "Kaufbeuren",
   "serviceType": ["Türöffnung", "Schlosswechsel", "Auto-Schlüsseldienst", "Einbruchschutz", "Tresoröffnung"],
   "openingHours": "Mo-Su 00:00-24:00",
-  "priceRange": "€€",
+  "priceRange": "$$",
   "paymentAccepted": ["Cash", "Credit Card"]
 };
 ---
