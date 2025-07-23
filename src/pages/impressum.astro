@@ -2,33 +2,36 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
 ---
 
 <Layout 
-    title="Impressum - Schlüsseldienst Kaufbeuren | Andreas Pabst"
-    description="Impressum und rechtliche Hinweise für Schlüsseldienst Kaufbeuren - Andreas Pabst, Immenstadt im Allgäu"
+    title={texts.legalPages.impressum.title}
+    description={texts.legalPages.impressum.description}
 >
     <Header />
     <main class="impressum-page">
         <div class="impressum-container">
             <div class="page-header">
-                <h1>Impressum</h1>
-                <p class="page-description">Rechtliche Hinweise und Kontaktdaten</p>
+                <h1>{texts.legalPages.impressum.pageTitle}</h1>
+                <p class="page-description">{texts.legalPages.impressum.pageDescription}</p>
             </div>
 
             <div class="impressum-content">
                 <section class="contact-info">
                     <h2>Angaben gemäß § 5 TMG</h2>
                     <div class="business-card">
-                        <h3>Schlüsseldienst Kaufbeuren</h3>
-                        <p><strong>Inhaber:</strong> Andreas Pabst</p>
-                        <p><strong>Adresse:</strong> Kästobel 13<br>87509 Immenstadt</p>
+                        <h3>{texts.legalPages.impressum.companyTitle}</h3>
+                        <p><strong>Inhaber:</strong> {texts.company.owner}</p>
+                        <p><strong>Adresse:</strong> {texts.company.address.street}<br>{texts.company.address.zip} {texts.company.address.city}</p>
                         
                         <div class="contact-details">
-                            <p><strong>Handy:</strong> <a href="tel:+491604996655">0160 4996655</a></p>
+                            <p><strong>Handy:</strong> <a href={`tel:${texts.company.phone}`}>{texts.company.phoneDisplay}</a></p>
                         </div>
                         
-                        <p><strong>Öffnungszeiten:</strong> Mo-So 00:00 Uhr - 23:59 Uhr<br>
+                        <p><strong>Öffnungszeiten:</strong> {texts.company.openingHours}<br>
                         <span class="highlight">(24 Stunden Notdienst)</span></p>
                     </div>
                 </section>

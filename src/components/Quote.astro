@@ -1,5 +1,10 @@
 ---
 import { Image } from 'astro:assets';
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const quote = texts.quote;
+const company = texts.company;
 ---
 
 <section class="quote">
@@ -8,7 +13,7 @@ import { Image } from 'astro:assets';
             <div class="quote-image">
                 <Image 
                     src="/images/me.jpg" 
-                    alt="Ihr Schlüsseldienst-Experte aus Kaufbeuren" 
+                    alt={`Ihr Schlüsseldienst-Experte aus ${company.serviceArea}`}
                     loading="lazy" 
                     width="200" 
                     height="200"
@@ -17,11 +22,11 @@ import { Image } from 'astro:assets';
             </div>
             <div class="quote-text">
                 <blockquote>
-                    Wir legen großen Wert auf exzellenten Service, um die Erwartungen unserer Kunden zu übertreffen.
+                    {quote.text}
                 </blockquote>
                 <div class="quote-author">
-                    <h3>Andreas Pabst</h3>
-                    <p>Geschäftsführer & Schlüsseldienst-Meister</p>
+                    <h3>{quote.author.name}</h3>
+                    <p>{quote.author.title}</p>
                 </div>
             </div>
         </div>

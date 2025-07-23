@@ -1,31 +1,11 @@
 ---
-// FAQ component with modern professional design
-const faqs = [
-  {
-    question: "Was kostet die Türöffnung beim Schlüsseldienst Kaufbeuren?",
-    answer: "Wir arbeiten mit transparenten Festpreisen ohne versteckte Kosten oder Wuchertarife. Kostenvoranschlag am Telefon."
-  },
-  {
-    question: "Wie schnell ist der Schlüsseldienst Kaufbeuren vor Ort?",
-    answer: "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt. Unser Schlüsseldienst-Team kennt Kaufbeuren und die umliegenden Gebiete bestens."
-  },
-  {
-    question: "Ist der Schlüsseldienst auch nachts und am Wochenende verfügbar?",
-    answer: "Ja, unser 24h Notdienst ist rund um die Uhr verfügbar - auch nachts, an Wochenenden und Feiertagen. Türöffnung, wenn Sie sie brauchen - 365 Tage im Jahr."
-  },
-  {
-    question: "Welche Zahlungsmöglichkeiten akzeptiert der Schlüsseldienst Kaufbeuren?",
-    answer: "Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Auch Überweisungen sind nach Absprache möglich. Keine Vorauszahlung erforderlich."
-  },
-  {
-    question: "Bietet der Schlüsseldienst auch Auto-Öffnungen an?",
-    answer: "Ja, neben Türöffnungen bieten wir auch professionelle Auto-Öffnungen an. Unser Team ist speziell für Fahrzeugöffnungen geschult und arbeitet beschädigungsfrei an allen Fahrzeugtypen."
-  },
-  {
-    question: "Was passiert bei Schlossschäden während der Türöffnung?",
-    answer: "Unsere erfahrenen Techniker öffnen Türen in der Regel beschädigungsfrei. Sollte doch einmal ein Schloss beschädigt werden, führen wir den Schlosswechsel direkt vor Ort durch - zu fairen Preisen."
-  }
-];
+// FAQ component using text configuration
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const faq = texts.faq;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <section class="faq">
@@ -36,21 +16,21 @@ const faqs = [
       </div>
       <h2>Alles was Sie über unseren Schlüsseldienst wissen müssen</h2>
       <p class="section-description">
-        Sie haben Fragen zu unserem Aufsperrdienst in Kaufbeuren? Hier finden Sie die wichtigsten Antworten zu unserem 24h Schlüsseldienst.
+        {faq.description}
       </p>
     </div>
     
     <div class="faq-grid">
-      {faqs.map((faq, index) => (
-        <div class="faq-item">
+      {faq.items.map((faqItem, index) => (
+        <div class="faq-item" aria-label={`${ariaLabels.faq.faqItem} ${index + 1}`}>
           <div class="faq-header">
-            <div class="question-number">
+            <div class="question-number" aria-hidden="true">
               {(index + 1).toString().padStart(2, '0')}
             </div>
-            <h3 class="faq-question">{faq.question}</h3>
+            <h3 class="faq-question">{faqItem.question}</h3>
           </div>
           <div class="faq-answer">
-            <p>{faq.answer}</p>
+            <p>{faqItem.answer}</p>
           </div>
         </div>
       ))}
@@ -63,7 +43,7 @@ const faqs = [
           Unser erfahrenes Team steht Ihnen jederzeit zur Verfügung. Rufen Sie uns an für eine kostenlose Beratung oder einen Kostenvoranschlag.
         </p>
         <div class="contact-actions">
-          <button class="contact-btn primary" onclick="window.location.href='tel:+491604996655'">
+          <button class="contact-btn primary" onclick="window.location.href='tel:+491604996655'" aria-label={ariaLabels.faq.ctaButton}>
             <span class="btn-text">Jetzt anrufen: +49 1604 996655</span>
             <span class="btn-subtext">Kostenlose Beratung</span>
           </button>

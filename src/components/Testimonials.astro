@@ -1,93 +1,40 @@
 ---
 import { Image } from 'astro:assets';
+import { getTexts } from '../utils/textConfig';
 
-// Testimonials section component with modern professional design
-const testimonials = [
-    {
-        name: "Thomas Weber",
-        location: "Kaufbeuren Zentrum",
-        rating: 5,
-        text: "Super schneller Service! War sehr schnell da und hat meine Tür professionell geöffnet. Preis wie am Telefon vereinbart. Sehr empfehlenswert!",
-        service: "Türöffnung",
-        avatar: "/images/testamonials/1.jpg"
-    },
-    {
-        name: "Amelie Vogl",
-        location: "Kaufbeuren Oberbeuren",
-        rating: 5,
-        text: "Mitten in der Nacht ausgesperrt. Der 24h Notdienst war schnell da und sehr freundlich. Faire Preise auch nachts. Danke!",
-        service: "Nacht-Notdienst",
-        avatar: "/images/testamonials/2.jpeg"
-    },
-    {
-        name: "Nils Köhler",
-        location: "Kaufbeuren Neugablonz",
-        rating: 5,
-        text: "Schlosswechsel nach Einbruchsversuch. Fühlen uns jetzt viel sicherer.",
-        service: "Schlosswechsel & Sicherheitsberatung",
-        avatar: "/images/testamonials/3.webp"
-    },
-    {
-        name: "Andrea Klein",
-        location: "Kaufbeuren Hirschzell", 
-        rating: 5,
-        text: "Auto-Schlüsseldienst war top! Schnell, professionell und ohne Kratzer am Lack. Preis-Leistung stimmt definitiv.",
-        service: "Auto-Schlüsseldienst",
-        avatar: "/images/testamonials/4.jpeg"
-    }
-];
-
-const trustMetrics = [
-    {
-        number: "1000+",
-        label: "Zufriedene Kunden",
-        description: "Vertrauen unserem Service"
-    },
-    {
-        number: "5 Sterne",
-        label: "Durchschnittliche Kundenbewertung",
-        description: ""
-    },
-    {
-        number: "24/7",
-        label: "Verfügbar",
-        description: "Auch nachts und am Wochenende"
-    },
-    {
-        number: "100%",
-        label: "Erfolgsquote",
-        description: "Türöffnung, Schlosswechsel, Auto-Öffnung	"
-    }
-];
+// Testimonials section component using text configuration
+const texts = getTexts();
+const testimonials = texts.testimonials;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <section class="testimonials">
     <div class="testimonials-container">
         <div class="section-header">
             <div class="header-badge">
-                <span>Kundenstimmen</span>
+                <span>{testimonials.badge}</span>
             </div>
-            <h2>Das sagen unsere Kunden über den Schlüsseldienst Kaufbeuren</h2>
+            <h2>{testimonials.title}</h2>
             <p class="section-description">
-                Über 1.000 zufriedene Kunden vertrauen unserem Aufsperrdienst. 
-                Lesen Sie echte Bewertungen zu unserem 24h Schlüsseldienst in Kaufbeuren.
+                {testimonials.description}
             </p>
         </div>
         
         <div class="testimonials-grid">
-            {testimonials.map((testimonial) => (
-                <article class="testimonial-card">
+            {testimonials.items.map((testimonial) => (
+                <article class="testimonial-card" aria-label={`${ariaLabels.testimonials.testimonialCard} ${testimonial.name}`}>
                     <div class="testimonial-header">
                         <div class="customer-info">
-                            <Image src={testimonial.avatar} alt={testimonial.name} class="customer-avatar" width={50} height={50} />
+                            <Image src={testimonial.avatar} alt={`Kunde ${testimonial.name}`} class="customer-avatar" width={50} height={50} />
                             <div class="customer-details">
                                 <h3 class="customer-name">{testimonial.name}</h3>
                                 <p class="customer-location">{testimonial.location}</p>
                             </div>
                         </div>
-                        <div class="rating">
+                        <div class="rating" aria-label={`Bewertung: ${testimonial.rating} von 5 Sternen`}>
                             {Array.from({length: testimonial.rating}, (_, i) => (
-                                <Image src="/icons/star.svg" alt="Star" loading="lazy" width={16} height={16} key={i} />
+                                <Image src="/icons/star.svg" alt="" loading="lazy" width={16} height={16} aria-hidden="true" />
                             ))}
                         </div>
                     </div>
@@ -104,9 +51,9 @@ const trustMetrics = [
         </div>
         
         <div class="trust-metrics">
-            <h3>Vertrauen Sie auf unsere Expertise</h3>
+            <h3>{testimonials.trustMetrics.title}</h3>
             <div class="metrics-grid">
-                {trustMetrics.map((metric) => (
+                {testimonials.trustMetrics.items.map((metric) => (
                     <div class="metric-card">
                         <div class="metric-number">{metric.number}</div>
                         <div class="metric-label">{metric.label}</div>
@@ -118,11 +65,11 @@ const trustMetrics = [
         
         <div class="testimonial-cta">
             <div class="cta-content">
-                <h3>Werden auch Sie unser zufriedener Kunde!</h3>
-                <p>Rufen Sie jetzt an für schnelle und professionelle Hilfe</p>
-                <button class="cta-button" onclick="window.location.href='tel:+491604996655'">
-                    <span class="cta-text">+49 1604 996655</span>
-                    <span class="cta-subtext">Kostenlose Beratung & Kostenvoranschlag</span>
+                <h3>{testimonials.cta.title}</h3>
+                <p>{testimonials.cta.description}</p>
+                <button class="cta-button" onclick={`window.location.href='tel:${company.phone}'`} aria-label={ariaLabels.testimonials.ctaButton}>
+                    <span class="cta-text">{testimonials.cta.buttonText}</span>
+                    <span class="cta-subtext">{testimonials.cta.buttonSubtext}</span>
                 </button>
             </div>
         </div>

@@ -1,6 +1,9 @@
 ---
-// This component renders a Leaflet map showing the outline of a city (e.g., Kaufbeuren)
-// Using Leaflet from a CDN to avoid module resolution issues
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const mapCenter = texts.company.mapCenter;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <head>
@@ -8,8 +11,8 @@
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 </head>
 
-<div id="map-container">
-  <div id="map"></div>
+<div id="map-container" aria-label={ariaLabels.map.container}>
+  <div id="map" role="img" aria-label={ariaLabels.map.region}></div>
 </div>
 
 <style>
@@ -39,7 +42,7 @@
   }
 </style>
 
-<script client:load>
+<script define:vars={{ mapCenter }}>
   const cityOutline = {
     "type": "FeatureCollection",
     "features": [
@@ -57,7 +60,7 @@
       boxZoom: false, // Disable box zoom
       tap: false, // Disable tap interactions on mobile
       keyboard: false // Disable keyboard navigation
-    }).setView([47.883, 10.617], 11); // Center on Kaufbeuren
+    }).setView(mapCenter, 11); // Center on city
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'

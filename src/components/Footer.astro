@@ -1,76 +1,59 @@
 ---
+import { getTexts } from '../utils/textConfig';
+
 const currentYear = new Date().getFullYear();
-
-const serviceLinks = [
-  { name: "Türöffnung Kaufbeuren"},
-  { name: "Auto-Schlüsseldienst"},
-  { name: "Schlosswechsel" },
-  { name: "24h Notdienst"}
-];
-
-const areaLinks = [
-  { name: "Kaufbeuren Zentrum" },
-  { name: "Neugablonz"},
-  { name: "Oberbeuren"},
-  { name: "Hirschzell"},
-  { name: "Kleinkemnat"},
-  { name: "Umgebung"}
-];
-
-const contactInfo = {
-  phone: "+49 1604 996655",
-  email: "firma@pabst-andreas.de",
-  address: "Kästobel 13, 87509 Immenstadt"
-};
+const texts = getTexts();
+const footer = texts.footer;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
-<footer>
+<footer role="contentinfo" aria-label={ariaLabels.footer.navigation}>
     <div class="footer-container">
         <div class="footer-content">
             <div class="footer-section company-info">
                 <div class="company-logo">
                     <div class="company-details">
-                        <h3>Schlüsseldienst Kaufbeuren</h3>
-                        <p class="company-tagline">Ihr zuverlässiger 24h Partner</p>
+                        <h3>{footer.company.name}</h3>
+                        <p class="company-tagline">{footer.company.tagline}</p>
                     </div>
                 </div>
 
                 <p class="company-description">
-                    Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren.
-                    Schnell und zuverlässig - 365 Tage im Jahr für Sie da.
+                    {footer.company.description}
                 </p>
 
                 <div class="contact-info-footer">
                     <div class="contact-item">
                         <div class="contact-details">
-                            <span class="contact-label">24h Notruf:</span>
-                            <strong class="contact-value">{contactInfo.phone}</strong>
+                            <span class="contact-label">{footer.contact.phoneLabel}</span>
+                            <strong class="contact-value">{footer.contact.phone}</strong>
                         </div>
                     </div>
 
                     <div class="contact-item">
                         <div class="contact-details">
-                            <span class="contact-label">E-Mail:</span>
-                            <span class="contact-value">{contactInfo.email}</span>
+                            <span class="contact-label">{footer.contact.emailLabel}</span>
+                            <span class="contact-value">{footer.contact.email}</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="footer-section">
-                <h4>Unsere Leistungen</h4>
+                <h4>{footer.services.title}</h4>
                 <ul class="footer-links">
-                    {serviceLinks.map((link) => (
-                        <li><a href={link.href} class="footer-link">{link.name}</a></li>
+                    {footer.services.items.map((serviceName) => (
+                        <li><a href="#" class="footer-link" aria-label={`${ariaLabels.footer.serviceLink} ${serviceName}`}>{serviceName}</a></li>
                     ))}
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Einsatzgebiete</h4>
+                <h4>{footer.areas.title}</h4>
                 <ul class="footer-links">
-                    {areaLinks.map((link) => (
-                        <li><a href={link.href} class="footer-link">{link.name}</a></li>
+                    {footer.areas.items.map((areaName) => (
+                        <li><a href="#" class="footer-link" aria-label={`${ariaLabels.footer.areaLink} ${areaName}`}>{areaName}</a></li>
                     ))}
                 </ul>
             </div>
@@ -79,11 +62,12 @@ const contactInfo = {
         <div class="footer-bottom">
             <div class="footer-legal">
                 <p class="copyright">
-                    &copy; {currentYear} Schlüsseldienst Kaufbeuren - Alle Rechte vorbehalten
+                    &copy; {currentYear} {footer.legal.copyright}
                 </p>
                 <div class="legal-links">
-                    <a href="/impressum" class="legal-link">Impressum</a>
-                    <a href="/datenschutz" class="legal-link">Datenschutz</a>
+                    {footer.legal.links.map((link) => (
+                        <a href={link.url} class="legal-link" aria-label={`${ariaLabels.footer.legalLink} ${link.text}`}>{link.text}</a>
+                    ))}
                 </div>
             </div>
         </div>
@@ -291,11 +275,7 @@ const contactInfo = {
     }
 
     .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: var(--spacing-8);
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--spacing-8);
+        justify-content: space-between;
         align-items: center;
     }
 

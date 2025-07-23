@@ -1,44 +1,40 @@
 ---
 import { Image } from 'astro:assets';
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const partners = texts.partners;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <section class="partners">
     <div class="partners-container">
         <div class="section-header">
             <div class="header-badge">
-                <span>Vertrauen & Qualität</span>
+                <span>{partners.badge}</span>
             </div>
-            <h2>Zertifizierter ADAC Partner für Ihren Schlüsseldienst</h2>
+            <h2>{partners.title}</h2>
             <p class="section-description">
-                Als offizieller ADAC Partner stehen wir für höchste Qualität und Vertrauen. 
-                Profitieren Sie von unserer zertifizierten Expertise und fairen Preisen.
+                {partners.description}
             </p>
         </div>
         
         <div class="partnership-content">
             <div class="partnership-info">
                 <div class="info-card">
-                    <h3>ADAC Qualitätsstandards</h3>
+                    <h3>{partners.qualityTitle}</h3>
                     <p>
-                        Wir erfüllen alle ADAC Qualitätskriterien für Schlüsseldienste und werden regelmäßig 
-                        geprüft. Das bedeutet für Sie: Transparente Preise, professionelle Ausführung und 
-                        kompetente Beratung.
+                        {partners.qualityDescription}
                     </p>
                     
                     <ul class="quality-features">
-                        <li class="feature-item">
-                            <span>Zertifizierte Techniker mit ADAC Schulung</span>
-                        </li>
-                        <li class="feature-item">
-                            <span>Transparente Preise ohne versteckte Kosten</span>
-                        </li>
-                        <li class="feature-item">
-                            <span>Professionelle Ausrüstung und Werkzeuge</span>
-                        </li>
-                        <li class="feature-item">
-                            <span>Regelmäßige Qualitätskontrolle durch ADAC</span>
-                        </li>
-                                        </ul>
+                        {partners.features.map((feature) => (
+                            <li class="feature-item">
+                                <span>{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
             
@@ -46,7 +42,7 @@ import { Image } from 'astro:assets';
                 <div class="image-container">
                     <Image 
                         src="/images/schluesseldienst-visual_720x540.jpg" 
-                        alt="ADAC Partner Schlüsseldienst Kaufbeuren - Professioneller Service" 
+                        alt={ariaLabels.partners.partnerImage}
                         loading="lazy" 
                         width="720" 
                         height="540"
@@ -54,8 +50,8 @@ import { Image } from 'astro:assets';
                     />
                     <div class="image-overlay">
                         <div class="adac-badge">
-                            <span class="badge-title">ADAC</span>
-                            <span class="badge-subtitle">Partner</span>
+                            <span class="badge-title">{partners.badge.title}</span>
+                            <span class="badge-subtitle">{partners.badge.subtitle}</span>
                         </div>
                     </div>
                 </div>
@@ -65,11 +61,11 @@ import { Image } from 'astro:assets';
         
         <div class="partnership-cta">
             <div class="cta-content">
-                <h3>Vertrauen Sie dem ADAC Partner in Kaufbeuren</h3>
-                <p>Rufen Sie uns an für schnelle, professionelle Hilfe nach ADAC Standard</p>
-                <button class="cta-button" onclick="window.location.href='tel:+491604996655'">
-                    <span class="cta-text">Jetzt anrufen: +49 1604 996655</span>
-                    <span class="cta-subtext">ADAC Qualität garantiert</span>
+                <h3>{partners.cta.title}</h3>
+                <p>{partners.cta.description}</p>
+                <button class="cta-button" onclick={`window.location.href='tel:${company.phone}'`} aria-label={ariaLabels.partners.ctaButton}>
+                    <span class="cta-text">{partners.cta.buttonText}</span>
+                    <span class="cta-subtext">{partners.cta.buttonSubtext}</span>
                 </button>
             </div>
         </div>

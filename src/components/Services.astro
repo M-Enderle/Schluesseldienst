@@ -1,43 +1,28 @@
 ---
-// Services section component with modern professional design
-const services = [
-    {
-        title: 'Türöffnung Kaufbeuren',
-        description: 'Professionelle Türöffnung ohne Beschädigung. Schnell, sicher und zuverlässig für alle Schlosstypen.',
-        keywords: 'Türöffnung, Aufsperrdienst, Notdienst',
-        features: ['Ohne Beschädigung', 'Alle Schlosstypen', 'Schnell und zuverlässig']
-    },
-    {
-        title: 'Auto-Schlüsseldienst',
-        description: 'Fahrzeug ausgesperrt? Wir öffnen Ihr Auto beschädigungsfrei - alle Marken und Modelle, moderne Fahrzeugtechnik.',
-        keywords: 'Auto öffnen, Fahrzeugöffnung, KFZ-Schlüsseldienst',
-        features: ['Alle Fahrzeugmarken', 'Moderne Technik', 'Beschädigungsfrei']
-    },
-    {
-        title: 'Schlosswechsel & Reparatur',
-        description: 'Sicherheitsschlösser, Zylinderwechsel und Schlossreparaturen von Markenherstellern. Beratung inklusive.',
-        keywords: 'Schlosswechsel, Zylindertausch, Sicherheitsschloss',
-        features: ['Markenhersteller', 'Sicherheitsberatung', 'Garantie inklusive']
-    }
-];
+// Services section component using text configuration
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const services = texts.services;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <section class="services">
     <div class="services-container">
         <div class="section-header">
             <div class="header-badge">
-                <span>Unsere Expertise</span>
+                <span>{services.badge}</span>
             </div>
-            <h2>Professionelle Schlüsseldienst-Leistungen in Kaufbeuren</h2>
+            <h2>{services.title}</h2>
             <p class="section-description">
-                Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. 
-                Unser 24h Notfall-Schlüsseldienst ist schnell und zuverlässig in ganz Kaufbeuren unterwegs.
+                {services.description}
             </p>
         </div>
         
         <div class="services-grid">
-            {services.map((service) => (
-                <article class="service-card">
+            {services.items.map((service) => (
+                <article class="service-card" aria-label={`${ariaLabels.services.serviceCard} ${service.title}`}>
                     <div class="service-content">
                         <h3 class="service-title">{service.title}</h3>
                         <p class="service-description">{service.description}</p>
@@ -53,9 +38,10 @@ const services = [
                         <div class="service-actions">
                             <button 
                                 class="service-btn primary"
-                                onclick="window.location.href='tel:+491604996655'"
+                                onclick={`window.location.href='tel:${company.phone}'`}
+                                aria-label={`${ariaLabels.services.ctaButton} - ${service.title}`}
                             >
-                                Jetzt beauftragen
+                                {service.buttonText}
                             </button>
                         </div>
                     </div>
@@ -65,13 +51,13 @@ const services = [
         
         <div class="services-cta">
             <div class="cta-content">
-                <h3>Notfall? Wir sind 24/7 für Sie da!</h3>
+                <h3>{services.cta.title}</h3>
                 <p>
-                    Rufen Sie jetzt an für sofortige Hilfe und kostenlose Beratung
+                    {services.cta.description}
                 </p>
                 <div class="cta-phone">
-                    <a href="tel:+491604996655" class="phone-number">+49 1604 996655</a>
-                    <span class="phone-description">Kostenloser Anruf - 24h erreichbar</span>
+                    <a href={`tel:${company.phone}`} class="phone-number">{services.cta.phoneNumber}</a>
+                    <span class="phone-description">{services.cta.phoneDescription}</span>
                 </div>
             </div>
 

@@ -9,14 +9,14 @@ import FAQ from '../components/FAQ.astro';
 import Testimonials from '../components/Testimonials.astro';
 import Footer from '../components/Footer.astro';
 import Map from '../components/Map.astro';
+import { getTexts } from '../utils/textConfig';
 
 import  SpeedInsights  from "@vercel/speed-insights/astro"
+
+const texts = getTexts();
 ---
 
-<Layout 
-    title="Schlüsseldienst Kaufbeuren | 24h Notdienst"
-    description="Schlüsseldienst Kaufbeuren ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst"
->
+<Layout>
     <Header />
     <main>
         <Hero />

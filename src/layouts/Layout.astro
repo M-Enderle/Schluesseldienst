@@ -1,11 +1,14 @@
 ---
+import { getTexts } from '../utils/textConfig';
+
 export interface Props {
-    title: string;
+    title?: string;
     description?: string;
     canonical?: string;
 }
 
-const { title, description = "Schlüsseldienst Kaufbeuren ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst", canonical } = Astro.props;
+const texts = getTexts();
+const { title = texts.seo.title, description = texts.seo.description, canonical } = Astro.props;
 
 const currentUrl = canonical || Astro.url.href;
 
@@ -45,18 +48,18 @@ const faqSchema = {
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocksmithBusiness", 
-  "name": "Schlüsseldienst Kaufbeuren",
-  "description": "Professioneller Schlüsseldienst in Kaufbeuren - 24h Notdienst, Türöffnung, Schlosswechsel und Einbruchschutz",
-  "telephone": "+49-1604-996655",
+  "name": texts.company.name,
+  "description": texts.company.description,
+  "telephone": texts.company.phone,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Kaufbeuren",
+    "addressLocality": texts.company.address.city,
     "@addressRegion": "Bayern", 
     "addressCountry": "DE"
   },
-  "areaServed": "Kaufbeuren",
+  "areaServed": texts.company.serviceArea,
   "serviceType": ["Türöffnung", "Schlosswechsel", "Auto-Schlüsseldienst", "Einbruchschutz", "Tresoröffnung"],
-  "openingHours": "Mo-Su 00:00-24:00",
+  "openingHours": texts.company.openingHours,
   "priceRange": "$$",
   "paymentAccepted": ["Cash", "Credit Card"]
 };
@@ -90,7 +93,7 @@ const businessSchema = {
     <meta property="twitter:description" content={description}>
     
     <!-- Local Business Keywords -->
-    <meta name="keywords" content="Schlüsseldienst Kaufbeuren, Aufsperrdienst Kaufbeuren, Türöffnung Kaufbeuren, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen">
+    <meta name="keywords" content={texts.seo.keywords}>
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -112,29 +115,35 @@ const businessSchema = {
     <!-- Google Analytics (replace with your tracking ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
+        // @ts-ignore
         window.dataLayer = window.dataLayer || [];
+        // @ts-ignore
         function gtag(){dataLayer.push(arguments);}
+        // @ts-ignore
         gtag('js', new Date());
+        // @ts-ignore
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
 
-    <button class="overlaybutton" aria-label="Jetzt anrufen" onclick="window.location.href='tel:+491604996655'">
-      <span class="btn-text">Jetzt anrufen</span>
-      <span class="phone-number">+49 1604 996655</span>
-      <span class="btn-subtext">Kostenlose Beratung</span>
+    <button class="overlaybutton" aria-label={texts.floatingButton.ariaLabel} onclick={`window.location.href='tel:${texts.company.phone}'`}>
+      <span class="btn-text">{texts.floatingButton.text}</span>
+      <span class="phone-number">{texts.floatingButton.phone}</span>
+      <span class="btn-subtext">{texts.floatingButton.subtext}</span>
     </button>
 
     <script>
         // Show/hide floating button based on scroll position
         window.addEventListener('scroll', function() {
-            const button = document.querySelector('.overlaybutton');
+            const button = document.querySelector('.overlaybutton') as HTMLElement;
             const scrollPosition = window.scrollY;
             const showThreshold = 200; // Show button after scrolling 200px
             
-            if (scrollPosition > showThreshold) {
-                button.classList.add('visible');
-            } else {
-                button.classList.remove('visible');
+            if (button) {
+                if (scrollPosition > showThreshold) {
+                    button.classList.add('visible');
+                } else {
+                    button.classList.remove('visible');
+                }
             }
         });
     </script>

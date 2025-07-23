@@ -1,22 +1,28 @@
 ---
-// Header component with modern professional design
+// Header component using text configuration
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const header = texts.header;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <header>
     <div class="header-container">
-        <a href="/" class="logo" aria-label="Schlüsseldienst Kaufbeuren Startseite">
+        <a href="/" class="logo" aria-label={ariaLabels.header.logo}>
             <span class="logo-text">
-                <span class="logo-line">Schlüsseldienst</span>
-                <span class="logo-line">Kaufbeuren</span>
+                <span class="logo-line">{header.logo.line1}</span>
+                <span class="logo-line">{header.logo.line2}</span>
             </span>
         </a>
         <div class="header-actions">
             <div class="phone-info">
-                <span class="phone-label">24h Notdienst</span>
-                <a href="tel:+491604996655" class="phone-number">+49 1604 996655</a>
+                <span class="phone-label">{header.phoneLabel}</span>
+                <a href={`tel:${company.phone}`} class="phone-number" aria-label={ariaLabels.header.phoneLink}>{header.phoneNumber}</a>
             </div>
-            <button class="contact-btn" onclick="window.location.href='tel:+491604996655'">
-                <span>Jetzt anrufen</span>
+            <button class="contact-btn" onclick={`window.location.href='tel:${company.phone}'`} aria-label={ariaLabels.header.callButton}>
+                <span>{header.callButton}</span>
             </button>
         </div>
     </div>

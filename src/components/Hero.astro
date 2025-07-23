@@ -1,29 +1,33 @@
 ---
 import { Image } from 'astro:assets';
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
+const hero = texts.hero;
+const company = texts.company;
+const ariaLabels = texts.ariaLabels;
 ---
 
 <section class="hero">
     <div class="hero-container">
         <div class="hero-content">
             <h1 class="hero-title">
-                Schlüsseldienst Kaufbeuren
-                <span class="title-highlight">24h Notdienst</span>
+                {hero.title}
+                <span class="title-highlight">{hero.titleHighlight}</span>
             </h1>
             
             <h2 class="hero-subtitle">
-                Schnell, sicher, professionell
+                {hero.subtitle}
             </h2>
             
             <p class="hero-description">
-                Ausgesperrt in Kaufbeuren? Wir sind 24/7 verfügbar. 
-                Türöffnung, Schlosswechsel, Auto-Öffnung - alles zu fairen Preisen 
-                und ohne versteckte Kosten.
+                {hero.description}
             </p>
             
             <div class="hero-actions">
-                <button class="cta-primary" onclick="window.location.href='tel:+491604996655'">
-                    <a href="tel:+491604996655" class="cta-text">+49 1604 996655</a>
-                    <span class="cta-subtext">Kostenlose Beratung</span>
+                <button class="cta-primary" onclick={`window.location.href='tel:${company.phone}'`} aria-label={ariaLabels.hero.ctaButton}>
+                    <a href={`tel:${company.phone}`} class="cta-text" aria-label={ariaLabels.hero.phoneLink}>{hero.ctaPrimary.text}</a>
+                    <span class="cta-subtext">{hero.ctaPrimary.subtext}</span>
                 </button>
             </div>
         </div>
@@ -39,8 +43,8 @@ import { Image } from 'astro:assets';
                         height="300"
                     />
                     <div class="gallery-overlay">
-                        <h4>Türöffnung ohne Schäden</h4>
-                        <p>Professionelle Werkzeuge & Techniken</p>
+                        <h4>{hero.gallery.item1.title}</h4>
+                        <p>{hero.gallery.item1.description}</p>
                     </div>
                 </div>
                 
@@ -53,20 +57,20 @@ import { Image } from 'astro:assets';
                         height="200"
                     />
                     <div class="gallery-overlay">
-                        <h4>Modernste Ausrüstung</h4>
+                        <h4>{hero.gallery.item2.title}</h4>
                     </div>
                 </div>
                 
                 <div class="gallery-item">
                     <Image 
                         src="/images/Car.jpeg" 
-                        alt="Auto-Schlüsseldienst Kaufbeuren" 
+                        alt={`Auto-Schlüsseldienst ${company.serviceArea}`}
                         loading="lazy" 
                         width="200" 
                         height="200"
                     />
                     <div class="gallery-overlay">
-                        <h4>Auto-Öffnung</h4>
+                        <h4>{hero.gallery.item3.title}</h4>
                     </div>
                 </div>
             </div>
@@ -124,7 +128,6 @@ import { Image } from 'astro:assets';
         align-items: center;
         gap: var(--spacing-2);
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
         padding: var(--spacing-2) var(--spacing-4);
         border-radius: var(--radius-xl);
         font-size: var(--font-sizes-sm);
@@ -188,7 +191,6 @@ import { Image } from 'astro:assets';
         align-items: center;
         gap: var(--spacing-3);
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
         padding: var(--spacing-4);
         border-radius: var(--radius-lg);
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -265,7 +267,6 @@ import { Image } from 'astro:assets';
     
     .cta-secondary {
         background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
         color: #111;
         padding: var(--spacing-4) var(--spacing-6);
         border-radius: var(--radius-xl);

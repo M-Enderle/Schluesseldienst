@@ -2,28 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getTexts } from '../utils/textConfig';
+
+const texts = getTexts();
 ---
 
 <Layout 
-    title="Datenschutzerklärung - Schlüsseldienst Kaufbeuren | DSGVO-konform"
-    description="Datenschutzerklärung für Schlüsseldienst Kaufbeuren - Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten nach DSGVO"
+    title={texts.legalPages.datenschutz.title}
+    description={texts.legalPages.datenschutz.description}
 >
     <Header />
     <main class="datenschutz-page">
         <div class="datenschutz-container">
             <div class="page-header">
-                <h1>Datenschutzerklärung</h1>
-                <p class="page-description">Informationen zum Datenschutz nach DSGVO</p>
+                <h1>{texts.legalPages.datenschutz.pageTitle}</h1>
+                <p class="page-description">{texts.legalPages.datenschutz.pageDescription}</p>
             </div>
 
             <div class="datenschutz-content">
                 <section class="privacy-section">
                     <h2>Verantwortlicher</h2>
                     <div class="contact-card">
-                        <p><strong>Andreas Pabst</strong><br>
-                        Kästobel 13<br>
-                        87509 Immenstadt<br>
-                        Telefon: <a href="tel:+491604996655">0160 4996655</a></p>
+                        <p><strong>{texts.company.owner}</strong><br>
+                        {texts.company.address.street}<br>
+                        {texts.company.address.zip} {texts.company.address.city}<br>
+                        Telefon: <a href={`tel:${texts.company.phone}`}>{texts.company.phoneDisplay}</a></p>
                     </div>
                 </section>
 
