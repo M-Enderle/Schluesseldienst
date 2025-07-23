@@ -261,6 +261,8 @@ const ariaLabels = texts.ariaLabels;
         font-weight: 700;
         color: var(--gray-900);
         margin-bottom: var(--spacing-1);
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
     
     .metric-card:hover .metric-label {
@@ -270,6 +272,8 @@ const ariaLabels = texts.ariaLabels;
     .metric-description {
         font-size: var(--font-sizes-sm);
         color: var(--gray-600);
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
     
     .metric-card:hover .metric-description {
@@ -368,7 +372,8 @@ const ariaLabels = texts.ariaLabels;
         }
         
         .metrics-grid {
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: var(--spacing-4);
         }
         
