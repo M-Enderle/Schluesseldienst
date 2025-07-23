@@ -1,48 +1,48 @@
 {
   "meta": {
-    "version": "munich-v1",
+    "version": "kaufbeuren-v1",
     "language": "de",
-    "description": "Text configuration for Schlüsseldienst München website"
+    "description": "Text configuration for Schlüsseldienst Kaufbeuren website"
   },
   "seo": {
-    "title": "Schlüsseldienst München | 24h Notdienst",
-    "description": "Schlüsseldienst München ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst",
-    "keywords": "Schlüsseldienst München, Aufsperrdienst München, Türöffnung München, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen"
+    "title": "Schlüsseldienst Kaufbeuren | 24h Notdienst",
+    "description": "Schlüsseldienst Kaufbeuren ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst",
+    "keywords": "Schlüsseldienst Kaufbeuren, Aufsperrdienst Kaufbeuren, Türöffnung Kaufbeuren, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen"
   },
   "company": {
-    "name": "Schlüsseldienst München",
-    "owner": "Max Mustermann",
+    "name": "Schlüsseldienst Kaufbeuren",
+    "owner": "Andreas Pabst",
     "tagline": "Ihr zuverlässiger 24h Partner",
-    "description": "Professioneller Aufsperrdienst in München und Umgebung seit über 15 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da.",
-    "phone": "+49 89 12345678",
-    "phoneDisplay": "+49 89 12345678",
-    "email": "info@schluesseldienst-muenchen.de",
+    "description": "Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da.",
+    "phone": "+49 1604 996655",
+    "phoneDisplay": "+49 1604 996655",
+    "email": "firma@pabst-andreas.de",
     "address": {
-      "street": "Maximilianstraße 10",
-      "zip": "80539",
-      "city": "München",
-      "fullAddress": "Maximilianstraße 10, 80539 München"
+      "street": "Kästobel 13",
+      "zip": "87509",
+      "city": "Immenstadt",
+      "fullAddress": "Kästobel 13, 87509 Immenstadt"
     },
-    "mapCenter": [48.137154, 11.576124],
-    "serviceArea": "München",
+    "mapCenter": [47.883, 10.617],
+    "serviceArea": "Kaufbeuren",
     "openingHours": "Mo-So 00:00-24:00"
   },
   "header": {
     "logo": {
       "line1": "Schlüsseldienst",
-      "line2": "München"
+      "line2": "Kaufbeuren"
     },
     "phoneLabel": "24h Notdienst",
-    "phoneNumber": "+49 89 12345678",
+    "phoneNumber": "+49 1604 996655",
     "callButton": "Jetzt anrufen"
   },
   "hero": {
-    "title": "Schlüsseldienst München",
+    "title": "Schlüsseldienst Kaufbeuren",
     "titleHighlight": "24h Notdienst",
     "subtitle": "Schnell, sicher, professionell",
-    "description": "Ausgesperrt in München? Wir sind 24/7 verfügbar. Türöffnung, Schlosswechsel, Auto-Öffnung - alles zu fairen Preisen und ohne versteckte Kosten.",
+    "description": "Ausgesperrt in Kaufbeuren? Wir sind 24/7 verfügbar. Türöffnung, Schlosswechsel, Auto-Öffnung - alles zu fairen Preisen und ohne versteckte Kosten.",
     "ctaPrimary": {
-      "text": "+49 89 12345678",
+      "text": "+49 1604 996655",
       "subtext": "Kostenlose Beratung"
     },
     "gallery": {
@@ -60,11 +60,11 @@
   },
   "services": {
     "badge": "Unsere Expertise",
-    "title": "Professionelle Schlüsseldienst-Leistungen in München",
-    "description": "Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. Unser 24h Notfall-Schlüsseldienst ist schnell und zuverlässig in ganz München unterwegs.",
+    "title": "Professionelle Schlüsseldienst-Leistungen in Kaufbeuren",
+    "description": "Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. Unser 24h Notfall-Schlüsseldienst ist schnell und zuverlässig in ganz Kaufbeuren unterwegs.",
     "items": [
       {
-        "title": "Türöffnung München",
+        "title": "Türöffnung Kaufbeuren",
         "description": "Professionelle Türöffnung ohne Beschädigung. Schnell, sicher und zuverlässig für alle Schlosstypen.",
         "features": ["Ohne Beschädigung", "Alle Schlosstypen", "Schnell und zuverlässig"],
         "buttonText": "Jetzt beauftragen"
@@ -85,14 +85,14 @@
     "cta": {
       "title": "Notfall? Wir sind 24/7 für Sie da!",
       "description": "Rufen Sie jetzt an für sofortige Hilfe und kostenlose Beratung",
-      "phoneNumber": "+49 89 12345678",
+      "phoneNumber": "+49 1604 996655",
       "phoneDescription": "Kostenloser Anruf - 24h erreichbar"
     }
   },
   "quote": {
-    "text": "In München setzen wir auf höchste Qualität und Kundenzufriedenheit - das ist unser Versprechen.",
+    "text": "Wir legen großen Wert auf exzellenten Service, um die Erwartungen unserer Kunden zu übertreffen.",
     "author": {
-      "name": "Max Mustermann",
+      "name": "Andreas Pabst",
       "title": "Geschäftsführer & Schlüsseldienst-Meister"
     }
   },
@@ -113,31 +113,31 @@
       "subtitle": "Partner"
     },
     "cta": {
-      "title": "Vertrauen Sie dem ADAC Partner in München",
+      "title": "Vertrauen Sie dem ADAC Partner in Kaufbeuren",
       "description": "Rufen Sie uns an für schnelle, professionelle Hilfe nach ADAC Standard",
-      "buttonText": "Jetzt anrufen: +49 89 12345678",
+      "buttonText": "Jetzt anrufen: +49 1604 996655",
       "buttonSubtext": "ADAC Qualität garantiert"
     }
   },
   "faq": {
     "badge": "Häufige Fragen",
     "title": "Alles was Sie über unseren Schlüsseldienst wissen müssen",
-    "description": "Sie haben Fragen zu unserem Aufsperrdienst in München? Hier finden Sie die wichtigsten Antworten zu unserem 24h Schlüsseldienst.",
+    "description": "Sie haben Fragen zu unserem Aufsperrdienst in Kaufbeuren? Hier finden Sie die wichtigsten Antworten zu unserem 24h Schlüsseldienst.",
     "items": [
       {
-        "question": "Was kostet die Türöffnung beim Schlüsseldienst München?",
+        "question": "Was kostet die Türöffnung beim Schlüsseldienst Kaufbeuren?",
         "answer": "Wir arbeiten mit transparenten Festpreisen ohne versteckte Kosten oder Wuchertarife. Kostenvoranschlag am Telefon."
       },
       {
-        "question": "Wie schnell ist der Schlüsseldienst München vor Ort?",
-        "answer": "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt. Unser Schlüsseldienst-Team kennt München und die umliegenden Gebiete bestens."
+        "question": "Wie schnell ist der Schlüsseldienst Kaufbeuren vor Ort?",
+        "answer": "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt. Unser Schlüsseldienst-Team kennt Kaufbeuren und die umliegenden Gebiete bestens."
       },
       {
         "question": "Ist der Schlüsseldienst auch nachts und am Wochenende verfügbar?",
         "answer": "Ja, unser 24h Notdienst ist rund um die Uhr verfügbar - auch nachts, an Wochenenden und Feiertagen. Türöffnung, wenn Sie sie brauchen - 365 Tage im Jahr."
       },
       {
-        "question": "Welche Zahlungsmöglichkeiten akzeptiert der Schlüsseldienst München?",
+        "question": "Welche Zahlungsmöglichkeiten akzeptiert der Schlüsseldienst Kaufbeuren?",
         "answer": "Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Auch Überweisungen sind nach Absprache möglich. Keine Vorauszahlung erforderlich."
       },
       {
@@ -152,44 +152,44 @@
     "contact": {
       "title": "Haben Sie weitere Fragen?",
       "description": "Unser erfahrenes Team steht Ihnen jederzeit zur Verfügung. Rufen Sie uns an für eine kostenlose Beratung oder einen Kostenvoranschlag.",
-      "buttonText": "Jetzt anrufen: +49 89 12345678",
+      "buttonText": "Jetzt anrufen: +49 1604 996655",
       "buttonSubtext": "Kostenlose Beratung"
     }
   },
   "testimonials": {
     "badge": "Kundenstimmen",
-    "title": "Das sagen unsere Kunden über den Schlüsseldienst München",
-    "description": "Über 2.000 zufriedene Kunden vertrauen unserem Aufsperrdienst. Lesen Sie echte Bewertungen zu unserem 24h Schlüsseldienst in München.",
+    "title": "Das sagen unsere Kunden über den Schlüsseldienst Kaufbeuren",
+    "description": "Über 1.000 zufriedene Kunden vertrauen unserem Aufsperrdienst. Lesen Sie echte Bewertungen zu unserem 24h Schlüsseldienst in Kaufbeuren.",
     "items": [
       {
-        "name": "Thomas Müller",
-        "location": "München Schwabing",
+        "name": "Thomas Weber",
+        "location": "Kaufbeuren Zentrum",
         "rating": 5,
-        "text": "Perfekter Service! Sehr schnell da und professionell gearbeitet. Preis war fair und transparent. Kann ich nur empfehlen!",
+        "text": "Super schneller Service! War sehr schnell da und hat meine Tür professionell geöffnet. Preis wie am Telefon vereinbart. Sehr empfehlenswert!",
         "service": "Türöffnung",
         "avatar": "/images/testamonials/1.jpg"
       },
       {
-        "name": "Maria Schmidt",
-        "location": "München Maxvorstadt",
+        "name": "Amelie Vogl",
+        "location": "Kaufbeuren Oberbeuren",
         "rating": 5,
-        "text": "Nachts ausgesperrt - der Notdienst war schnell da und sehr freundlich. Top Service auch zu später Stunde!",
+        "text": "Mitten in der Nacht ausgesperrt. Der 24h Notdienst war schnell da und sehr freundlich. Faire Preise auch nachts. Danke!",
         "service": "Nacht-Notdienst",
         "avatar": "/images/testamonials/2.jpeg"
       },
       {
-        "name": "Stefan Weber",
-        "location": "München Haidhausen",
+        "name": "Nils Köhler",
+        "location": "Kaufbeuren Neugablonz",
         "rating": 5,
-        "text": "Kompetente Beratung beim Schlosswechsel. Sehr zufrieden mit der Qualität und dem Service.",
+        "text": "Schlosswechsel nach Einbruchsversuch. Fühlen uns jetzt viel sicherer.",
         "service": "Schlosswechsel & Sicherheitsberatung",
         "avatar": "/images/testamonials/3.webp"
       },
       {
-        "name": "Anna Bauer",
-        "location": "München Lehel",
+        "name": "Andrea Klein",
+        "location": "Kaufbeuren Hirschzell",
         "rating": 5,
-        "text": "Auto-Schlüssel im Fahrzeug vergessen - schnelle und beschädigungsfreie Öffnung. Danke!",
+        "text": "Auto-Schlüsseldienst war top! Schnell, professionell und ohne Kratzer am Lack. Preis-Leistung stimmt definitiv.",
         "service": "Auto-Schlüsseldienst",
         "avatar": "/images/testamonials/4.jpeg"
       }
@@ -198,7 +198,7 @@
       "title": "Vertrauen Sie auf unsere Expertise",
       "items": [
         {
-          "number": "2000+",
+          "number": "1000+",
           "label": "Zufriedene Kunden",
           "description": "Vertrauen unserem Service"
         },
@@ -222,26 +222,26 @@
     "cta": {
       "title": "Werden auch Sie unser zufriedener Kunde!",
       "description": "Rufen Sie jetzt an für schnelle und professionelle Hilfe",
-      "buttonText": "+49 89 12345678",
+      "buttonText": "+49 1604 996655",
       "buttonSubtext": "Kostenlose Beratung & Kostenvoranschlag"
     }
   },
   "footer": {
     "company": {
-      "name": "Schlüsseldienst München",
+      "name": "Schlüsseldienst Kaufbeuren",
       "tagline": "Ihr zuverlässiger 24h Partner",
-      "description": "Professioneller Aufsperrdienst in München und Umgebung seit über 15 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da."
+      "description": "Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da."
     },
     "contact": {
       "phoneLabel": "24h Notruf:",
-      "phone": "+49 89 12345678",
+      "phone": "+49 1604 996655",
       "emailLabel": "E-Mail:",
-      "email": "info@schluesseldienst-muenchen.de"
+      "email": "firma@pabst-andreas.de"
     },
     "services": {
       "title": "Unsere Leistungen",
       "items": [
-        "Türöffnung München",
+        "Türöffnung Kaufbeuren",
         "Auto-Schlüsseldienst",
         "Schlosswechsel",
         "24h Notdienst"
@@ -250,16 +250,16 @@
     "areas": {
       "title": "Einsatzgebiete",
       "items": [
-        "München Zentrum",
-        "Schwabing",
-        "Maxvorstadt",
-        "Haidhausen",
-        "Lehel",
+        "Kaufbeuren Zentrum",
+        "Neugablonz",
+        "Oberbeuren",
+        "Hirschzell",
+        "Kleinkemnat",
         "Umgebung"
       ]
     },
     "legal": {
-      "copyright": "Schlüsseldienst München - Alle Rechte vorbehalten",
+      "copyright": "Schlüsseldienst Kaufbeuren - Alle Rechte vorbehalten",
       "links": [
         {
           "text": "Impressum",
@@ -274,19 +274,19 @@
   },
   "floatingButton": {
     "text": "Jetzt anrufen",
-    "phone": "+49 89 12345678",
+    "phone": "+49 1604 996655",
     "subtext": "Kostenlose Beratung",
     "ariaLabel": "Jetzt anrufen für 24h Schlüsseldienst Notdienst"
   },
   "ariaLabels": {
     "header": {
-      "logo": "Zur Startseite von Schlüsseldienst München",
+      "logo": "Zur Startseite von Schlüsseldienst Kaufbeuren",
       "phoneLink": "Telefonnummer anrufen: 24h Notdienst",
       "callButton": "Jetzt anrufen für sofortige Hilfe"
     },
     "hero": {
       "ctaButton": "Jetzt anrufen für Türöffnung und Schlüsseldienst",
-      "phoneLink": "Telefon: Schlüsseldienst München 24h Notdienst"
+      "phoneLink": "Telefon: Schlüsseldienst Kaufbeuren 24h Notdienst"
     },
     "services": {
       "ctaButton": "Service beauftragen - Jetzt anrufen",
@@ -302,7 +302,7 @@
     },
     "partners": {
       "ctaButton": "ADAC Partner kontaktieren - Jetzt anrufen",
-      "partnerImage": "ADAC Partnerschaft Schlüsseldienst München"
+      "partnerImage": "ADAC Partnerschaft Schlüsseldienst Kaufbeuren"
     },
     "footer": {
       "serviceLink": "Mehr über Service erfahren:",
@@ -311,21 +311,21 @@
       "navigation": "Fußzeilen-Navigation"
     },
     "map": {
-      "container": "Interaktive Karte des Einsatzgebiets München",
-      "region": "Karte zeigt Servicegebiet von Schlüsseldienst München"
+      "container": "Interaktive Karte des Einsatzgebiets Kaufbeuren",
+      "region": "Karte zeigt Servicegebiet von Schlüsseldienst Kaufbeuren"
     }
   },
   "legalPages": {
     "impressum": {
-      "title": "Impressum - Schlüsseldienst München | Max Mustermann",
-      "description": "Impressum und rechtliche Hinweise für Schlüsseldienst München - Max Mustermann, München",
+      "title": "Impressum - Schlüsseldienst Kaufbeuren | Andreas Pabst",
+      "description": "Impressum und rechtliche Hinweise für Schlüsseldienst Kaufbeuren - Andreas Pabst, Immenstadt im Allgäu",
       "pageTitle": "Impressum",
       "pageDescription": "Rechtliche Hinweise und Kontaktdaten",
-      "companyTitle": "Schlüsseldienst München"
+      "companyTitle": "Schlüsseldienst Kaufbeuren"
     },
     "datenschutz": {
-      "title": "Datenschutzerklärung - Schlüsseldienst München | DSGVO-konform",
-      "description": "Datenschutzerklärung für Schlüsseldienst München - Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten nach DSGVO",
+      "title": "Datenschutzerklärung - Schlüsseldienst Kaufbeuren | DSGVO-konform",
+      "description": "Datenschutzerklärung für Schlüsseldienst Kaufbeuren - Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten nach DSGVO",
       "pageTitle": "Datenschutzerklärung",
       "pageDescription": "Informationen zum Datenschutz nach DSGVO"
     }

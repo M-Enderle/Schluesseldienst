@@ -1,48 +1,48 @@
 {
   "meta": {
-    "version": "kaufbeuren-v1",
+    "version": "{{ city }}-v1",
     "language": "de",
-    "description": "Text configuration for Schlüsseldienst Kaufbeuren website"
+    "description": "Text configuration for Schlüsseldienst {{ city }} website"
   },
   "seo": {
-    "title": "Schlüsseldienst Kaufbeuren | 24h Notdienst",
-    "description": "Schlüsseldienst Kaufbeuren ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst",
-    "keywords": "Schlüsseldienst Kaufbeuren, Aufsperrdienst Kaufbeuren, Türöffnung Kaufbeuren, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen"
+    "title": "Schlüsseldienst {{ city }} | 24h Notdienst",
+    "description": "Schlüsseldienst {{ city }} ✅ Schnell vor Ort ✅ 24h Notdienst ☎ Jetzt anrufen - Ihr zuverlässiger Aufsperrdienst",
+    "keywords": "Schlüsseldienst {{ city }}, Aufsperrdienst {{ city }}, Türöffnung {{ city }}, Schlosswechsel, Auto-Schlüsseldienst, 24h Notdienst, Einbruchschutz, Tresoröffnung, Schlüssel nachmachen"
   },
   "company": {
-    "name": "Schlüsseldienst Kaufbeuren",
-    "owner": "Andreas Pabst",
+    "name": "Schlüsseldienst {{ city }}",
+    "owner": "{{ owner_name }}",
     "tagline": "Ihr zuverlässiger 24h Partner",
-    "description": "Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da.",
-    "phone": "+49 1604 996655",
-    "phoneDisplay": "+49 1604 996655",
-    "email": "firma@pabst-andreas.de",
+    "description": "Professioneller Aufsperrdienst in {{ city }} und Umgebung seit über {{ years_experience }} Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da.",
+    "phone": "{{ phone_number }}",
+    "phoneDisplay": "{{ phone_number }}",
+    "email": "{{ email_address }}",
     "address": {
-      "street": "Kästobel 13",
-      "zip": "87509",
-      "city": "Immenstadt",
-      "fullAddress": "Kästobel 13, 87509 Immenstadt"
+      "street": "{{ street_address }}",
+      "zip": "{{ postal_code }}",
+      "city": "{{ city }}",
+      "fullAddress": "{{ street_address }}, {{ postal_code }} {{ city }}"
     },
-    "mapCenter": [47.883, 10.617],
-    "serviceArea": "Kaufbeuren",
+    "mapCenter": ["{{ latitude }}", "{{ longitude }}"],
+    "serviceArea": "{{ city }}",
     "openingHours": "Mo-So 00:00-24:00"
   },
   "header": {
     "logo": {
       "line1": "Schlüsseldienst",
-      "line2": "Kaufbeuren"
+      "line2": "{{ city }}"
     },
     "phoneLabel": "24h Notdienst",
-    "phoneNumber": "+49 1604 996655",
+    "phoneNumber": "{{ phone_number }}",
     "callButton": "Jetzt anrufen"
   },
   "hero": {
-    "title": "Schlüsseldienst Kaufbeuren",
+    "title": "Schlüsseldienst {{ city }}",
     "titleHighlight": "24h Notdienst",
     "subtitle": "Schnell, sicher, professionell",
-    "description": "Ausgesperrt in Kaufbeuren? Wir sind 24/7 verfügbar. Türöffnung, Schlosswechsel, Auto-Öffnung - alles zu fairen Preisen und ohne versteckte Kosten.",
+    "description": "Ausgesperrt in {{ city }}? Wir sind 24/7 verfügbar. Türöffnung, Schlosswechsel, Auto-Öffnung - alles zu fairen Preisen und ohne versteckte Kosten.",
     "ctaPrimary": {
-      "text": "+49 1604 996655",
+      "text": "{{ phone_number }}",
       "subtext": "Kostenlose Beratung"
     },
     "gallery": {
@@ -60,11 +60,11 @@
   },
   "services": {
     "badge": "Unsere Expertise",
-    "title": "Professionelle Schlüsseldienst-Leistungen in Kaufbeuren",
-    "description": "Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. Unser 24h Notfall-Schlüsseldienst ist schnell und zuverlässig in ganz Kaufbeuren unterwegs.",
+    "title": "Professionelle Schlüsseldienst-Leistungen in {{ city }}",
+    "description": "Wir lösen alle Ihre Probleme rund um Türen, Schlösser und Sicherheit. Unser 24h Notfall-Schlüsseldienst ist schnell und zuverlässig in ganz {{ city }} unterwegs.",
     "items": [
       {
-        "title": "Türöffnung Kaufbeuren",
+        "title": "Türöffnung {{ city }}",
         "description": "Professionelle Türöffnung ohne Beschädigung. Schnell, sicher und zuverlässig für alle Schlosstypen.",
         "features": ["Ohne Beschädigung", "Alle Schlosstypen", "Schnell und zuverlässig"],
         "buttonText": "Jetzt beauftragen"
@@ -85,19 +85,19 @@
     "cta": {
       "title": "Notfall? Wir sind 24/7 für Sie da!",
       "description": "Rufen Sie jetzt an für sofortige Hilfe und kostenlose Beratung",
-      "phoneNumber": "+49 1604 996655",
+      "phoneNumber": "{{ phone_number }}",
       "phoneDescription": "Kostenloser Anruf - 24h erreichbar"
     }
   },
   "quote": {
-    "text": "Wir legen großen Wert auf exzellenten Service, um die Erwartungen unserer Kunden zu übertreffen.",
+    "text": "{{ company_quote }}",
     "author": {
-      "name": "Andreas Pabst",
+      "name": "{{ owner_name }}",
       "title": "Geschäftsführer & Schlüsseldienst-Meister"
     }
   },
   "partners": {
-    "badge": "Vertrauen & Qualität",
+    "sectionBadge": "Vertrauen & Qualität",
     "title": "Zertifizierter ADAC Partner für Ihren Schlüsseldienst",
     "description": "Als offizieller ADAC Partner stehen wir für höchste Qualität und Vertrauen. Profitieren Sie von unserer zertifizierten Expertise und fairen Preisen.",
     "qualityTitle": "ADAC Qualitätsstandards",
@@ -108,36 +108,36 @@
       "Professionelle Ausrüstung und Werkzeuge",
       "Regelmäßige Qualitätskontrolle durch ADAC"
     ],
-    "badge": {
+    "adacBadge": {
       "title": "ADAC",
       "subtitle": "Partner"
     },
     "cta": {
-      "title": "Vertrauen Sie dem ADAC Partner in Kaufbeuren",
+      "title": "Vertrauen Sie dem ADAC Partner in {{ city }}",
       "description": "Rufen Sie uns an für schnelle, professionelle Hilfe nach ADAC Standard",
-      "buttonText": "Jetzt anrufen: +49 1604 996655",
+      "buttonText": "Jetzt anrufen: {{ phone_number }}",
       "buttonSubtext": "ADAC Qualität garantiert"
     }
   },
   "faq": {
     "badge": "Häufige Fragen",
     "title": "Alles was Sie über unseren Schlüsseldienst wissen müssen",
-    "description": "Sie haben Fragen zu unserem Aufsperrdienst in Kaufbeuren? Hier finden Sie die wichtigsten Antworten zu unserem 24h Schlüsseldienst.",
+    "description": "Sie haben Fragen zu unserem Aufsperrdienst in {{ city }}? Hier finden Sie die wichtigsten Antworten zu unserem 24h Schlüsseldienst.",
     "items": [
       {
-        "question": "Was kostet die Türöffnung beim Schlüsseldienst Kaufbeuren?",
+        "question": "Was kostet die Türöffnung beim Schlüsseldienst {{ city }}?",
         "answer": "Wir arbeiten mit transparenten Festpreisen ohne versteckte Kosten oder Wuchertarife. Kostenvoranschlag am Telefon."
       },
       {
-        "question": "Wie schnell ist der Schlüsseldienst Kaufbeuren vor Ort?",
-        "answer": "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt. Unser Schlüsseldienst-Team kennt Kaufbeuren und die umliegenden Gebiete bestens."
+        "question": "Wie schnell ist der Schlüsseldienst {{ city }} vor Ort?",
+        "answer": "Wir sind sehr schnell bei Ihnen vor Ort. Bei Notfällen bemühen wir uns um die schnellstmögliche Anfahrt. Unser Schlüsseldienst-Team kennt {{ city }} und die umliegenden Gebiete bestens."
       },
       {
         "question": "Ist der Schlüsseldienst auch nachts und am Wochenende verfügbar?",
         "answer": "Ja, unser 24h Notdienst ist rund um die Uhr verfügbar - auch nachts, an Wochenenden und Feiertagen. Türöffnung, wenn Sie sie brauchen - 365 Tage im Jahr."
       },
       {
-        "question": "Welche Zahlungsmöglichkeiten akzeptiert der Schlüsseldienst Kaufbeuren?",
+        "question": "Welche Zahlungsmöglichkeiten akzeptiert der Schlüsseldienst {{ city }}?",
         "answer": "Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten. Auch Überweisungen sind nach Absprache möglich. Keine Vorauszahlung erforderlich."
       },
       {
@@ -152,45 +152,45 @@
     "contact": {
       "title": "Haben Sie weitere Fragen?",
       "description": "Unser erfahrenes Team steht Ihnen jederzeit zur Verfügung. Rufen Sie uns an für eine kostenlose Beratung oder einen Kostenvoranschlag.",
-      "buttonText": "Jetzt anrufen: +49 1604 996655",
+      "buttonText": "Jetzt anrufen: {{ phone_number }}",
       "buttonSubtext": "Kostenlose Beratung"
     }
   },
   "testimonials": {
     "badge": "Kundenstimmen",
-    "title": "Das sagen unsere Kunden über den Schlüsseldienst Kaufbeuren",
-    "description": "Über 1.000 zufriedene Kunden vertrauen unserem Aufsperrdienst. Lesen Sie echte Bewertungen zu unserem 24h Schlüsseldienst in Kaufbeuren.",
+    "title": "Das sagen unsere Kunden über den Schlüsseldienst {{ city }}",
+    "description": "Über {{ customer_count }}+ zufriedene Kunden vertrauen unserem Aufsperrdienst. Lesen Sie echte Bewertungen zu unserem 24h Schlüsseldienst in {{ city }}.",
     "items": [
       {
-        "name": "Thomas Weber",
-        "location": "Kaufbeuren Zentrum",
+        "name": "{{ customer_1_name }}",
+        "location": "{{ city }} {{ district_1 }}",
         "rating": 5,
-        "text": "Super schneller Service! War sehr schnell da und hat meine Tür professionell geöffnet. Preis wie am Telefon vereinbart. Sehr empfehlenswert!",
-        "service": "Türöffnung",
+        "text": "{{ customer_1_testimonial }}",
+        "service": "{{ customer_1_service }}",
         "avatar": "/images/testamonials/1.jpg"
       },
       {
-        "name": "Amelie Vogl",
-        "location": "Kaufbeuren Oberbeuren",
+        "name": "{{ customer_2_name }}",
+        "location": "{{ city }} {{ district_2 }}",
         "rating": 5,
-        "text": "Mitten in der Nacht ausgesperrt. Der 24h Notdienst war schnell da und sehr freundlich. Faire Preise auch nachts. Danke!",
-        "service": "Nacht-Notdienst",
+        "text": "{{ customer_2_testimonial }}",
+        "service": "{{ customer_2_service }}",
         "avatar": "/images/testamonials/2.jpeg"
       },
       {
-        "name": "Nils Köhler",
-        "location": "Kaufbeuren Neugablonz",
+        "name": "{{ customer_3_name }}",
+        "location": "{{ city }} {{ district_3 }}",
         "rating": 5,
-        "text": "Schlosswechsel nach Einbruchsversuch. Fühlen uns jetzt viel sicherer.",
-        "service": "Schlosswechsel & Sicherheitsberatung",
+        "text": "{{ customer_3_testimonial }}",
+        "service": "{{ customer_3_service }}",
         "avatar": "/images/testamonials/3.webp"
       },
       {
-        "name": "Andrea Klein",
-        "location": "Kaufbeuren Hirschzell",
+        "name": "{{ customer_4_name }}",
+        "location": "{{ city }} {{ district_4 }}",
         "rating": 5,
-        "text": "Auto-Schlüsseldienst war top! Schnell, professionell und ohne Kratzer am Lack. Preis-Leistung stimmt definitiv.",
-        "service": "Auto-Schlüsseldienst",
+        "text": "{{ customer_4_testimonial }}",
+        "service": "{{ customer_4_service }}",
         "avatar": "/images/testamonials/4.jpeg"
       }
     ],
@@ -198,7 +198,7 @@
       "title": "Vertrauen Sie auf unsere Expertise",
       "items": [
         {
-          "number": "1000+",
+          "number": "{{ customer_count }}+",
           "label": "Zufriedene Kunden",
           "description": "Vertrauen unserem Service"
         },
@@ -222,26 +222,26 @@
     "cta": {
       "title": "Werden auch Sie unser zufriedener Kunde!",
       "description": "Rufen Sie jetzt an für schnelle und professionelle Hilfe",
-      "buttonText": "+49 1604 996655",
+      "buttonText": "{{ phone_number }}",
       "buttonSubtext": "Kostenlose Beratung & Kostenvoranschlag"
     }
   },
   "footer": {
     "company": {
-      "name": "Schlüsseldienst Kaufbeuren",
+      "name": "Schlüsseldienst {{ city }}",
       "tagline": "Ihr zuverlässiger 24h Partner",
-      "description": "Professioneller Aufsperrdienst in Kaufbeuren und Umgebung seit über 10 Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da."
+      "description": "Professioneller Aufsperrdienst in {{ city }} und Umgebung seit über {{ years_experience }} Jahren. Schnell und zuverlässig - 365 Tage im Jahr für Sie da."
     },
     "contact": {
       "phoneLabel": "24h Notruf:",
-      "phone": "+49 1604 996655",
+      "phone": "{{ phone_number }}",
       "emailLabel": "E-Mail:",
-      "email": "firma@pabst-andreas.de"
+      "email": "{{ email_address }}"
     },
     "services": {
       "title": "Unsere Leistungen",
       "items": [
-        "Türöffnung Kaufbeuren",
+        "Türöffnung {{ city }}",
         "Auto-Schlüsseldienst",
         "Schlosswechsel",
         "24h Notdienst"
@@ -250,16 +250,16 @@
     "areas": {
       "title": "Einsatzgebiete",
       "items": [
-        "Kaufbeuren Zentrum",
-        "Neugablonz",
-        "Oberbeuren",
-        "Hirschzell",
-        "Kleinkemnat",
+        "{{ city }} Zentrum",
+        "{{ district_1 }}",
+        "{{ district_2 }}",
+        "{{ district_3 }}",
+        "{{ district_4 }}",
         "Umgebung"
       ]
     },
     "legal": {
-      "copyright": "Schlüsseldienst Kaufbeuren - Alle Rechte vorbehalten",
+      "copyright": "Schlüsseldienst {{ city }} - Alle Rechte vorbehalten",
       "links": [
         {
           "text": "Impressum",
@@ -274,19 +274,19 @@
   },
   "floatingButton": {
     "text": "Jetzt anrufen",
-    "phone": "+49 1604 996655",
+    "phone": "{{ phone_number }}",
     "subtext": "Kostenlose Beratung",
     "ariaLabel": "Jetzt anrufen für 24h Schlüsseldienst Notdienst"
   },
   "ariaLabels": {
     "header": {
-      "logo": "Zur Startseite von Schlüsseldienst Kaufbeuren",
+      "logo": "Zur Startseite von Schlüsseldienst {{ city }}",
       "phoneLink": "Telefonnummer anrufen: 24h Notdienst",
       "callButton": "Jetzt anrufen für sofortige Hilfe"
     },
     "hero": {
       "ctaButton": "Jetzt anrufen für Türöffnung und Schlüsseldienst",
-      "phoneLink": "Telefon: Schlüsseldienst Kaufbeuren 24h Notdienst"
+      "phoneLink": "Telefon: Schlüsseldienst {{ city }} 24h Notdienst"
     },
     "services": {
       "ctaButton": "Service beauftragen - Jetzt anrufen",
@@ -302,7 +302,7 @@
     },
     "partners": {
       "ctaButton": "ADAC Partner kontaktieren - Jetzt anrufen",
-      "partnerImage": "ADAC Partnerschaft Schlüsseldienst Kaufbeuren"
+      "partnerImage": "ADAC Partnerschaft Schlüsseldienst {{ city }}"
     },
     "footer": {
       "serviceLink": "Mehr über Service erfahren:",
@@ -311,23 +311,23 @@
       "navigation": "Fußzeilen-Navigation"
     },
     "map": {
-      "container": "Interaktive Karte des Einsatzgebiets Kaufbeuren",
-      "region": "Karte zeigt Servicegebiet von Schlüsseldienst Kaufbeuren"
+      "container": "Interaktive Karte des Einsatzgebiets {{ city }}",
+      "region": "Karte zeigt Servicegebiet von Schlüsseldienst {{ city }}"
     }
   },
   "legalPages": {
     "impressum": {
-      "title": "Impressum - Schlüsseldienst Kaufbeuren | Andreas Pabst",
-      "description": "Impressum und rechtliche Hinweise für Schlüsseldienst Kaufbeuren - Andreas Pabst, Immenstadt im Allgäu",
+      "title": "Impressum - Schlüsseldienst {{ city }} | {{ owner_name }}",
+      "description": "Impressum und rechtliche Hinweise für Schlüsseldienst {{ city }} - {{ owner_name }}, {{ city }}",
       "pageTitle": "Impressum",
       "pageDescription": "Rechtliche Hinweise und Kontaktdaten",
-      "companyTitle": "Schlüsseldienst Kaufbeuren"
+      "companyTitle": "Schlüsseldienst {{ city }}"
     },
     "datenschutz": {
-      "title": "Datenschutzerklärung - Schlüsseldienst Kaufbeuren | DSGVO-konform",
-      "description": "Datenschutzerklärung für Schlüsseldienst Kaufbeuren - Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten nach DSGVO",
+      "title": "Datenschutzerklärung - Schlüsseldienst {{ city }} | DSGVO-konform",
+      "description": "Datenschutzerklärung für Schlüsseldienst {{ city }} - Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten nach DSGVO",
       "pageTitle": "Datenschutzerklärung",
       "pageDescription": "Informationen zum Datenschutz nach DSGVO"
     }
   }
-} 
+}
