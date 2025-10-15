@@ -230,10 +230,7 @@ npm run preview
 ```
 
 ### **Deployment Targets**
-- **Vercel** (recommended) - Zero-config deployment
-- **Netlify** - Static site hosting
-- **GitHub Pages** - Free hosting option
-- **Traditional hosting** - Upload dist/ folder
+- Hetzner
 
 ### **Environment Variables**
 ```bash
