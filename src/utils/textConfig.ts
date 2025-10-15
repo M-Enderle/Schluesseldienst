@@ -1,4 +1,14 @@
-import textsConfig from '../config/texts.json';
+import textsDefault from '../config/texts.json';
+import textsKaufbeuren from '../config/texts-kaufbeuren.json';
+
+const city = process.env.BUILD_CITY || 'default';
+
+const textsMap = {
+  default: textsDefault,
+  kaufbeuren: textsKaufbeuren,
+};
+
+const textsConfig = textsMap[city as keyof typeof textsMap] || textsDefault;
 
 export type TextConfig = typeof textsConfig;
 
@@ -31,4 +41,4 @@ export function replaceTextVariables(text: string, variables: Record<string, str
   });
 }
 
-export default textsConfig; 
+export default textsConfig;
